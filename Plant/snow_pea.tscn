@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c30yywynasie1"]
+
+[node name="SnowPea" type="StaticBody2D" unique_id=2110900091]
+metadata/_edit_group_ = true
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1389531004]
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1365518132]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1617027684]
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=113150871]
+
+[node name="PeaPosition" type="Marker2D" parent="." unique_id=1989611240]
