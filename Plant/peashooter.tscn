@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cbdauhwt7aoii"]
+
+[node name="Peashooter" type="StaticBody2D" unique_id=744830110]
+metadata/_edit_group_ = true
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1387742215]
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=4686047]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1849814122]
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=274607806]
+
+[node name="PeaPosition" type="Marker2D" parent="." unique_id=1323371557]

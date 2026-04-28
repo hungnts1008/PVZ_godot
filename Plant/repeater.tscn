@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bt7agxc8gqlmt"]
+
+[node name="Repeater" type="StaticBody2D" unique_id=985354725]
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1122480624]
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1579341784]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1042138290]
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1141981092]
+
+[node name="BurstTimer" type="Timer" parent="." unique_id=552948611]
+
+[node name="PeaPosition" type="Marker2D" parent="." unique_id=2041016596]
