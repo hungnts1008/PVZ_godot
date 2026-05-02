@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://b5nb8pgjayraa"]
+
+[ext_resource type="Script" uid="uid://y25048usknro" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://fidj5joddtvy" path="res://PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://brqqyumbnoj3q" path="res://sun_flower_button.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://w0o30qgc1i74" path="res://art/sun_flower.png" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://c8w5gpocl5ygk" path="res://art/peashooter.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bheiqmpqoi5pe" path="res://art/wall_nut.png" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://uq5o175rb7wd" path="res://pea_shooter_button.gd" id="6_dg77c"]
+[ext_resource type="Texture2D" uid="uid://jy6vajqam6r0" path="res://art/cherry_bomb.png" id="7_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dhx8mn0bovuov" path="res://art/snow_pea.png" id="8_dg77c"]
+[ext_resource type="Script" uid="uid://csv3fmr3xbybk" path="res://wall_nut_button.gd" id="8_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://dkpiratspdeic" path="res://art/repeater.png" id="9_ycdy4"]
+[ext_resource type="Script" uid="uid://8vogl4mm1k06" path="res://cherry_bomb_button.gd" id="10_vivmo"]
+[ext_resource type="Texture2D" uid="uid://bdj4y6tivonm8" path="res://art/chomper.png" id="10_w48qg"]
+[ext_resource type="Texture2D" uid="uid://fsm2llqym7lx" path="res://art/mine_potato.png" id="11_vivmo"]
+[ext_resource type="Script" uid="uid://blsl2g2nvryeg" path="res://snow_pea_button.gd" id="12_vivmo"]
+[ext_resource type="Script" uid="uid://blamhlkrsi2cd" path="res://repeater_button.gd" id="14_2cqfq"]
+[ext_resource type="Script" uid="uid://rnd0w720ov2f" path="res://chomper_button.gd" id="16_yaehf"]
+[ext_resource type="Script" uid="uid://bdk5ribx8c0pf" path="res://potato_mine_button.gd" id="18_074og"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0.8822211, 0.47534126, 0.22577852, 1)
+
+[node name="Main" type="Node" unique_id=2134178134]
+script = ExtResource("1_h2yge")
+
+[node name="Arena" type="Node2D" parent="." unique_id=1572911805]
+
+[node name="Sprite2D" type="Sprite2D" parent="Arena" unique_id=480019562]
+texture = ExtResource("2_1bvp3")
+centered = false
+region_enabled = true
+region_rect = Rect2(9.021851, 35.08326, 1395.1602, 599.09863)
+
+[node name="Camera2D" type="Camera2D" parent="Arena" unique_id=757124426]
+anchor_mode = 0
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=848004613]
+
+[node name="Shop" type="Control" parent="UI" unique_id=1779243587]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="ShopPanel" type="Panel" parent="UI/Shop" unique_id=229363398]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+pivot_offset = Vector2(0, 120)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Shop/ShopPanel" unique_id=918041792]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 365.0
+grow_horizontal = 2
+scale = Vector2(0.42, 0.42)
+theme_override_constants/separation = 0
+
+[node name="SunFlowerButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=1691686210]
+layout_mode = 2
+texture_normal = ExtResource("3_h2yge")
+stretch_mode = 4
+script = ExtResource("3_1bvp3")
+
+[node name="Icon" type="TextureRect" parent="UI/Shop/ShopPanel/HBoxContainer/SunFlowerButton" unique_id=865956366]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_h2yge")
+
+[node name="Price" type="Label" parent="UI/Shop/ShopPanel/HBoxContainer/SunFlowerButton" unique_id=1934270226]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "100"
+
+[node name="PeaShooterButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=693455987]
+layout_mode = 2
+texture_normal = ExtResource("5_lquwl")
+stretch_mode = 4
+script = ExtResource("6_dg77c")
+
+[node name="WallNutButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=1687976325]
+layout_mode = 2
+texture_normal = ExtResource("6_7mycd")
+stretch_mode = 4
+script = ExtResource("8_ycdy4")
+
+[node name="CherryBombButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=1653665519]
+layout_mode = 2
+texture_normal = ExtResource("7_efxa6")
+stretch_mode = 4
+script = ExtResource("10_vivmo")
+
+[node name="SnowPeaButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=1656813346]
+layout_mode = 2
+texture_normal = ExtResource("8_dg77c")
+stretch_mode = 4
+script = ExtResource("12_vivmo")
+
+[node name="RepeaterButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=847081705]
+layout_mode = 2
+texture_normal = ExtResource("9_ycdy4")
+stretch_mode = 4
+script = ExtResource("14_2cqfq")
+
+[node name="ChomperButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=1982520576]
+layout_mode = 2
+texture_normal = ExtResource("10_w48qg")
+stretch_mode = 4
+script = ExtResource("16_yaehf")
+
+[node name="PotatoMineButton" type="TextureButton" parent="UI/Shop/ShopPanel/HBoxContainer" unique_id=1683441761]
+layout_mode = 2
+texture_normal = ExtResource("11_vivmo")
+stretch_mode = 4
+script = ExtResource("18_074og")
+
+[node name="SunLabel" type="Label" parent="UI" unique_id=1283975351]
+offset_right = 40.0
+offset_bottom = 23.0

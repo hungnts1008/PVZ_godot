@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://b5nb8pgjayraa"]
+
+[ext_resource type="Script" uid="uid://y25048usknro" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://fidj5joddtvy" path="res://PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png" id="2_1bvp3"]
+
+[sub_resource type="GDScript" id="GDScript_0xm2m"]
+script/source = "extends Camera2D
+
+@onready var bg = get_parent().get_node(\"Sprite2D\")
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var screen_size = get_viewport_rect().size
+	var bg_size = bg.texture.get_size() * bg.scale
+	
+	var zoom_x = screen_size.x / bg_size.x
+	var zoom_y = screen_size.y / bg_size.y
+	
+	var zoom = max(zoom_x, zoom_y)
+	
+	self.zoom = Vector2(zoom, zoom)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Main" type="Node" unique_id=2134178134]
+script = ExtResource("1_h2yge")
+
+[node name="Arena" type="Node2D" parent="." unique_id=1572911805]
+
+[node name="Sprite2D" type="Sprite2D" parent="Arena" unique_id=480019562]
+texture = ExtResource("2_1bvp3")
+centered = false
+region_enabled = true
+region_rect = Rect2(9.021851, 35.08326, 1395.1602, 599.09863)
+
+[node name="Camera2D" type="Camera2D" parent="Arena" unique_id=757124426]
+anchor_mode = 0
+script = SubResource("GDScript_0xm2m")
+
+[node name="Shop" type="CanvasLayer" parent="." unique_id=848004613]
+
+[node name="ShopPanel" type="Control" parent="Shop" unique_id=1779243587]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Shop/ShopPanel" unique_id=918041792]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlantCard" type="TextureButton" parent="Shop/ShopPanel/HBoxContainer" unique_id=1691686210]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Shop/ShopPanel/HBoxContainer/PlantCard" unique_id=865956366]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Price" type="Label" parent="Shop/ShopPanel/HBoxContainer/PlantCard" unique_id=1934270226]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ShopLabel" type="Label" parent="Shop" unique_id=1283975351]
+offset_right = 40.0
+offset_bottom = 23.0
