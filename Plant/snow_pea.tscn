@@ -1,14 +1,23 @@
 [gd_scene format=3 uid="uid://c30yywynasie1"]
 
+[ext_resource type="Script" uid="uid://dyurvh3dr31oy" path="res://scripts/plants/snow_pea.gd" id="1_d2auo"]
+[ext_resource type="Script" uid="uid://cqatg702rrrs" path="res://scripts/components/target_detector_raycast2d.gd" id="2_v3h3k"]
+[ext_resource type="Script" uid="uid://b3wj88wn2l7so" path="res://scripts/components/shoot_timer.gd" id="3_rqs4q"]
+
 [node name="SnowPea" type="StaticBody2D" unique_id=2110900091]
-metadata/_edit_group_ = true
+script = ExtResource("1_d2auo")
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1389531004]
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1365518132]
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1617027684]
+collision_mask = 2
+script = ExtResource("2_v3h3k")
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=113150871]
+wait_time = 1.5
+script = ExtResource("3_rqs4q")
+detector_path = NodePath("../RayCast2D")
 
 [node name="PeaPosition" type="Marker2D" parent="." unique_id=1989611240]
