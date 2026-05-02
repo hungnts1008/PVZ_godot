@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dn31x04ko02d8"]
+
+[ext_resource type="Script" uid="uid://bpmynx8clw8sq" path="res://scripts/projectiles/frozen_pea.gd" id="1_duj6c"]
+
+[node name="FrozenPea" type="Area2D" unique_id=207649914]
+script = ExtResource("1_duj6c")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1805307025]
