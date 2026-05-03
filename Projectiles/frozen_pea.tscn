@@ -1,8 +1,29 @@
 [gd_scene format=3 uid="uid://dn31x04ko02d8"]
 
 [ext_resource type="Script" uid="uid://bpmynx8clw8sq" path="res://scripts/projectiles/frozen_pea.gd" id="1_duj6c"]
+[ext_resource type="Texture2D" uid="uid://dtswsdor3m21" path="res://art/assets/frozen_pea.tres" id="2_dabub"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dabub"]
+radius = 12.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dabub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dabub")
+}],
+"loop": true,
+"name": &"frozen_pea",
+"speed": 5.0
+}]
 
 [node name="FrozenPea" type="Area2D" unique_id=207649914]
+collision_mask = 2
 script = ExtResource("1_duj6c")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1805307025]
+shape = SubResource("CircleShape2D_dabub")
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=558614695]
+sprite_frames = SubResource("SpriteFrames_dabub")
+animation = &"frozen_pea"
