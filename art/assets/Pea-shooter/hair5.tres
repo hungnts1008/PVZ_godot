@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://cu3iikry86xv1"]
+
+[ext_resource type="Texture2D" uid="uid://d1tpxo4w2qmq3" path="res://art/assets/Peashooter and Repeater.png" id="1_grmt8"]
+
+[resource]
+atlas = ExtResource("1_grmt8")
+region = Rect2(45.71405, 73.81325, 18.123665, 23.331024)
