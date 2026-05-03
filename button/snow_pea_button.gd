@@ -4,7 +4,7 @@ signal plant_selected(data)
 
 var plant_data = {
 	"name": "snow_pea",
-	"cost": 100
+	"cost": 175
 }
 
 func _ready():

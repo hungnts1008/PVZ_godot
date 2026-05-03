@@ -4,7 +4,7 @@ signal plant_selected(data)
 
 var plant_data = {
 	"name": "repeater",
-	"cost": 100
+	"cost": 200
 }
 
 func _ready():
