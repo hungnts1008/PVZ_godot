@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fidj5joddtvy"
-path="res://.godot/imported/PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png-0c752ab3f825cf8ce612a2289df13439.ctex"
+uid="uid://jy6vajqam6r0"
+path="res://.godot/imported/cherry_bomb.png-2c6ac7433485ba5720a043faf86daf37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png"
-dest_files=["res://.godot/imported/PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png-0c752ab3f825cf8ce612a2289df13439.ctex"]
+source_file="res://art/images/cherry_bomb.png"
+dest_files=["res://.godot/imported/cherry_bomb.png-2c6ac7433485ba5720a043faf86daf37.ctex"]
 
 [params]
 

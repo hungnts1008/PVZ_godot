@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jy6vajqam6r0"
-path="res://.godot/imported/cherry_bomb.png-e17683ab62f89e1fbc26c374312024bd.ctex"
+uid="uid://dkpiratspdeic"
+path="res://.godot/imported/repeater.png-21150ccfdc767d3bb2e6fd40ed74aeb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cherry_bomb.png"
-dest_files=["res://.godot/imported/cherry_bomb.png-e17683ab62f89e1fbc26c374312024bd.ctex"]
+source_file="res://art/images/repeater.png"
+dest_files=["res://.godot/imported/repeater.png-21150ccfdc767d3bb2e6fd40ed74aeb6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8w5gpocl5ygk"
-path="res://.godot/imported/peashooter.png-6a65aafb5366e2e9bcbe1db86a67bc0c.ctex"
+uid="uid://bdj4y6tivonm8"
+path="res://.godot/imported/chomper.png-13522992067f4b26506d182a7264712c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/peashooter.png"
-dest_files=["res://.godot/imported/peashooter.png-6a65aafb5366e2e9bcbe1db86a67bc0c.ctex"]
+source_file="res://art/images/chomper.png"
+dest_files=["res://.godot/imported/chomper.png-13522992067f4b26506d182a7264712c.ctex"]
 
 [params]
 
