@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://bkijqt8au1xon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg40w"]
-size = Vector2(76, 142)
+size = Vector2(142, 209)
 
-[node name="EnemyTest" type="Area2D" unique_id=657757612 groups=["enemies"]]
+[node name="EnemyTest" type="CharacterBody2D" unique_id=1395966435 groups=["enemies"]]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1200733237 groups=["enemies"]]
-light_mask = 0
-visibility_layer = 0
-position = Vector2(0, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=556416508]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_tg40w")

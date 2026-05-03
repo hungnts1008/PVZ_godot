@@ -39,11 +39,10 @@ region_rect = Rect2(9.021851, 35.08326, 1395.1602, 599.09863)
 anchor_mode = 0
 
 [node name="Peashooter" parent="Arena" unique_id=744830110 instance=ExtResource("3_cegan")]
-position = Vector2(284, 349)
-scale = Vector2(0.6, 0.6)
+position = Vector2(288, 376)
 
-[node name="EnemyTest" parent="Arena" unique_id=657757612 instance=ExtResource("4_82xsv")]
-position = Vector2(537, 322)
+[node name="EnemyTest" parent="Arena" unique_id=1395966435 instance=ExtResource("4_82xsv")]
+position = Vector2(673, 303)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=848004613]
 
