@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://b5nb8pgjayraa"]
 
 [ext_resource type="Script" uid="uid://y25048usknro" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://fidj5joddtvy" path="res://art/PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://fidj5joddtvy" path="res://art/images/PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://brqqyumbnoj3q" path="res://button/sun_flower_button.gd" id="3_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://w0o30qgc1i74" path="res://art/sun_flower.png" id="3_h2yge"]
-[ext_resource type="Texture2D" uid="uid://c8w5gpocl5ygk" path="res://art/peashooter.png" id="5_lquwl"]
-[ext_resource type="Texture2D" uid="uid://bheiqmpqoi5pe" path="res://art/wall_nut.png" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cbdauhwt7aoii" path="res://Plant/peashooter.tscn" id="3_cegan"]
+[ext_resource type="Texture2D" uid="uid://w0o30qgc1i74" path="res://art/images/sun_flower.png" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bkijqt8au1xon" path="res://enemy_test.tscn" id="4_82xsv"]
+[ext_resource type="Texture2D" uid="uid://c8w5gpocl5ygk" path="res://art/images/peashooter.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://bheiqmpqoi5pe" path="res://art/images/wall_nut.png" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://uq5o175rb7wd" path="res://button/pea_shooter_button.gd" id="6_dg77c"]
-[ext_resource type="Texture2D" uid="uid://jy6vajqam6r0" path="res://art/cherry_bomb.png" id="7_efxa6"]
-[ext_resource type="Texture2D" uid="uid://dhx8mn0bovuov" path="res://art/snow_pea.png" id="8_dg77c"]
+[ext_resource type="Texture2D" uid="uid://da54wmcnffqxn" path="res://art/images/cherry_bomb.png" id="7_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dhx8mn0bovuov" path="res://art/images/snow_pea.png" id="8_dg77c"]
 [ext_resource type="Script" uid="uid://csv3fmr3xbybk" path="res://button/wall_nut_button.gd" id="8_ycdy4"]
-[ext_resource type="Texture2D" uid="uid://dkpiratspdeic" path="res://art/repeater.png" id="9_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://dkpiratspdeic" path="res://art/images/repeater.png" id="9_ycdy4"]
 [ext_resource type="Script" uid="uid://8vogl4mm1k06" path="res://button/cherry_bomb_button.gd" id="10_vivmo"]
-[ext_resource type="Texture2D" uid="uid://bdj4y6tivonm8" path="res://art/chomper.png" id="10_w48qg"]
-[ext_resource type="Texture2D" uid="uid://fsm2llqym7lx" path="res://art/mine_potato.png" id="11_vivmo"]
+[ext_resource type="Texture2D" uid="uid://bdj4y6tivonm8" path="res://art/images/chomper.png" id="10_w48qg"]
+[ext_resource type="Texture2D" uid="uid://fsm2llqym7lx" path="res://art/images/mine_potato.png" id="11_vivmo"]
 [ext_resource type="Script" uid="uid://blsl2g2nvryeg" path="res://button/snow_pea_button.gd" id="12_vivmo"]
 [ext_resource type="Script" uid="uid://blamhlkrsi2cd" path="res://button/repeater_button.gd" id="14_2cqfq"]
 [ext_resource type="Script" uid="uid://rnd0w720ov2f" path="res://button/chomper_button.gd" id="16_yaehf"]
@@ -35,6 +37,13 @@ region_rect = Rect2(9.021851, 35.08326, 1395.1602, 599.09863)
 
 [node name="Camera2D" type="Camera2D" parent="Arena" unique_id=757124426]
 anchor_mode = 0
+
+[node name="Peashooter" parent="Arena" unique_id=744830110 instance=ExtResource("3_cegan")]
+position = Vector2(284, 349)
+scale = Vector2(0.6, 0.6)
+
+[node name="EnemyTest" parent="Arena" unique_id=657757612 instance=ExtResource("4_82xsv")]
+position = Vector2(537, 322)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=848004613]
 

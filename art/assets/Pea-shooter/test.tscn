@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://clfm0cqi1onov"]
+
+[ext_resource type="Script" uid="uid://bspe2ya4monrm" path="res://scripts/plants/peashooter.gd" id="1_japgf"]
+
+[node name="Test" type="Node" unique_id=368996040]
+
+[node name="Peashooter" type="StaticBody2D" parent="." unique_id=2025748564]
+script = ExtResource("1_japgf")
+metadata/_custom_type_script = "uid://bspe2ya4monrm"
