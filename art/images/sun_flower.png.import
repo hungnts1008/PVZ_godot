@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdj4y6tivonm8"
-path="res://.godot/imported/chomper.png-0ee71366bb90822b27a94c72d59a4e76.ctex"
+uid="uid://w0o30qgc1i74"
+path="res://.godot/imported/sun_flower.png-cea6f028fded870f88af4044b99a7306.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/chomper.png"
-dest_files=["res://.godot/imported/chomper.png-0ee71366bb90822b27a94c72d59a4e76.ctex"]
+source_file="res://art/images/sun_flower.png"
+dest_files=["res://.godot/imported/sun_flower.png-cea6f028fded870f88af4044b99a7306.ctex"]
 
 [params]
 

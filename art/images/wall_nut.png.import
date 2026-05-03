@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhx8mn0bovuov"
-path="res://.godot/imported/snow_pea.png-9c7a6aa5e22bbd0a27bc95024640f8bc.ctex"
+uid="uid://bheiqmpqoi5pe"
+path="res://.godot/imported/wall_nut.png-85b99fd59fc23b1116494a11e98274b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/snow_pea.png"
-dest_files=["res://.godot/imported/snow_pea.png-9c7a6aa5e22bbd0a27bc95024640f8bc.ctex"]
+source_file="res://art/images/wall_nut.png"
+dest_files=["res://.godot/imported/wall_nut.png-85b99fd59fc23b1116494a11e98274b4.ctex"]
 
 [params]
 
