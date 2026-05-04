@@ -5,7 +5,7 @@ class_name Repeater
 @export var burst_timer_path: NodePath = NodePath("BurstTimer")
 @export var muzzle_path: NodePath = NodePath("PeaPosition")
 
-@export var projectile_scene: PackedScene = preload("res://Projectiles/pea.tscn")
+@export var projectile_scene: PackedScene = preload("res://scenes/projectiles/pea.tscn")
 @export var projectile_speed: float = 450.0
 @export var projectile_damage: int = 20
 

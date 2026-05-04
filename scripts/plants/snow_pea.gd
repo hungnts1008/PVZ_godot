@@ -4,7 +4,7 @@ class_name SnowPea
 @export var shoot_timer_path: NodePath = NodePath("ShootTimer")
 @export var muzzle_path: NodePath = NodePath("PeaPosition")
 
-@export var projectile_scene: PackedScene = preload("res://Projectiles/frozen_pea.tscn")
+@export var projectile_scene: PackedScene = preload("res://scenes/projectiles/frozen_pea.tscn")
 @export var projectile_speed: float = 450.0
 @export var projectile_damage: int = 20
 

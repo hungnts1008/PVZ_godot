@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bt7agxc8gqlmt"]
+
+[ext_resource type="Script" uid="uid://0sgnuw7807ie" path="res://scripts/plants/repeater.gd" id="1_r4016"]
+[ext_resource type="Script" uid="uid://cqatg702rrrs" path="res://scripts/components/target_detector_raycast2d.gd" id="2_xrg67"]
+[ext_resource type="Script" uid="uid://b3wj88wn2l7so" path="res://scripts/components/shoot_timer.gd" id="3_pw6m4"]
+
+[node name="Repeater" type="StaticBody2D" unique_id=985354725]
+script = ExtResource("1_r4016")
+
+[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1122480624]
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1579341784]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1042138290]
+collision_mask = 2
+script = ExtResource("2_xrg67")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1141981092]
+wait_time = 1.5
+script = ExtResource("3_pw6m4")
+detector_path = NodePath("../RayCast2D")
+
+[node name="BurstTimer" type="Timer" parent="." unique_id=552948611]
+wait_time = 0.2
+
+[node name="PeaPosition" type="Marker2D" parent="." unique_id=2041016596]
