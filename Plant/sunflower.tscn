@@ -1,11 +1,183 @@
 [gd_scene format=3 uid="uid://42q3k0ygnmvp"]
 
+[ext_resource type="Texture2D" uid="uid://k0vip8rt1q8p" path="res://art/assets/Sunflower/leaves2.tres" id="1_flm11"]
+[ext_resource type="Texture2D" uid="uid://cv5ducrvhq4k5" path="res://art/assets/Sunflower/body2.tres" id="1_tlrh7"]
+[ext_resource type="Texture2D" uid="uid://d2327lqf2bd08" path="res://art/assets/Sunflower/head.tres" id="1_xfvvh"]
+[ext_resource type="Texture2D" uid="uid://bd16gh5uv87g" path="res://art/assets/Sunflower/petal1.tres" id="2_0v11v"]
+[ext_resource type="Texture2D" uid="uid://dwn2l7n1npdi2" path="res://art/assets/Sunflower/body1.tres" id="2_0yxkg"]
+[ext_resource type="Texture2D" uid="uid://b750e0jrhdm67" path="res://art/assets/Sunflower/leaves5.tres" id="2_tuxos"]
+[ext_resource type="Texture2D" uid="uid://bdorm4tjr26rj" path="res://art/assets/Sunflower/leaves6.tres" id="3_5q3wm"]
+[ext_resource type="Texture2D" uid="uid://2xj2vsrq868v" path="res://art/assets/Sunflower/petal2.tres" id="4_tgrpd"]
+[ext_resource type="Texture2D" uid="uid://c0m30g8fjg7p4" path="res://art/assets/Sunflower/petal3.tres" id="5_gtr46"]
+[ext_resource type="Texture2D" uid="uid://c537myub6sakh" path="res://art/assets/Sunflower/leaves4.tres" id="6_fqrw3"]
+[ext_resource type="Texture2D" uid="uid://oo1b1tenjf25" path="res://art/assets/Sunflower/petal5.tres" id="6_ys1a4"]
+[ext_resource type="Texture2D" uid="uid://b2n25elypv564" path="res://art/assets/Sunflower/petal4.tres" id="7_5lvb6"]
+[ext_resource type="Texture2D" uid="uid://dmsg44mwjqgvf" path="res://art/assets/Sunflower/leaves1.tres" id="7_affpi"]
+[ext_resource type="Texture2D" uid="uid://dewlfy0o2s6g6" path="res://art/assets/Sunflower/petal6.tres" id="8_flm11"]
+[ext_resource type="Texture2D" uid="uid://bny8yerrlsy3d" path="res://art/assets/Sunflower/leaves3.tres" id="8_g6wyr"]
+[ext_resource type="Texture2D" uid="uid://cbcmkbiwpmdgu" path="res://art/assets/Sunflower/petal7.tres" id="9_tuxos"]
+[ext_resource type="Texture2D" uid="uid://b0ykmbqg4cxi" path="res://art/assets/Sunflower/petal8.tres" id="10_5q3wm"]
+[ext_resource type="Texture2D" uid="uid://bxndhs4wgirj3" path="res://art/assets/Sunflower/petal9.tres" id="11_fqrw3"]
+[ext_resource type="Texture2D" uid="uid://bmyyeoe53t3hp" path="res://art/assets/Sunflower/petal17.tres" id="12_affpi"]
+[ext_resource type="Texture2D" uid="uid://btm04dtao6s3" path="res://art/assets/Sunflower/petal15.tres" id="13_g6wyr"]
+[ext_resource type="Texture2D" uid="uid://788gsful6o0q" path="res://art/assets/Sunflower/petal16.tres" id="14_qin4o"]
+[ext_resource type="Texture2D" uid="uid://cm6jv30diakye" path="res://art/assets/Sunflower/petal14.tres" id="15_1o5su"]
+[ext_resource type="Texture2D" uid="uid://dhjxp2nqqtk0x" path="res://art/assets/Sunflower/petal13.tres" id="16_hpj1w"]
+[ext_resource type="Texture2D" uid="uid://bh7xg2t2n5wi3" path="res://art/assets/Sunflower/petal12.tres" id="17_hkjyw"]
+[ext_resource type="Texture2D" uid="uid://ba03133romi7g" path="res://art/assets/Sunflower/petal11.tres" id="18_15x1a"]
+[ext_resource type="Texture2D" uid="uid://dkrunaj07lf4i" path="res://art/assets/Sunflower/petal10.tres" id="19_n3ge8"]
+[ext_resource type="Texture2D" uid="uid://bq10g026nmfh3" path="res://art/assets/Sunflower/petal18.tres" id="20_40bn5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qin4o"]
+size = Vector2(70, 81)
+
 [node name="Sunflower" type="StaticBody2D" unique_id=875610985]
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1853535742]
+
+[node name="Stem" type="Sprite2D" parent="Sprite" unique_id=802230130]
+position = Vector2(-6, -51)
+
+[node name="BackLeaves" type="Sprite2D" parent="Sprite/Stem" unique_id=810440925]
+scale = Vector2(0.7, 0.7)
 metadata/_edit_group_ = true
 
-[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=389656164]
+[node name="1" type="Sprite2D" parent="Sprite/Stem/BackLeaves" unique_id=260641874]
+position = Vector2(1.2857153, 54.857143)
+texture = ExtResource("1_flm11")
+
+[node name="2" type="Sprite2D" parent="Sprite/Stem/BackLeaves" unique_id=1265514243]
+position = Vector2(-18.714285, 50.857143)
+texture = ExtResource("2_tuxos")
+
+[node name="3" type="Sprite2D" parent="Sprite/Stem/BackLeaves" unique_id=407928208]
+position = Vector2(22.285715, 47.857143)
+texture = ExtResource("3_5q3wm")
+
+[node name="Body" type="Sprite2D" parent="Sprite/Stem" unique_id=621756749]
+metadata/_edit_group_ = true
+
+[node name="1" type="Sprite2D" parent="Sprite/Stem/Body" unique_id=1028209399]
+position = Vector2(-1, 19)
+texture = ExtResource("2_0yxkg")
+
+[node name="2" type="Sprite2D" parent="Sprite/Stem/Body" unique_id=971012020]
+position = Vector2(2, 35)
+texture = ExtResource("1_tlrh7")
+
+[node name="FrontLeaves" type="Sprite2D" parent="Sprite/Stem" unique_id=1166079271]
+position = Vector2(4.7683716e-07, 0)
+scale = Vector2(0.7, 0.7)
+metadata/_edit_group_ = true
+
+[node name="1" type="Sprite2D" parent="Sprite/Stem/FrontLeaves" unique_id=618727705]
+position = Vector2(39.28571, 62.714287)
+texture = ExtResource("6_fqrw3")
+
+[node name="2" type="Sprite2D" parent="Sprite/Stem/FrontLeaves" unique_id=1848096478]
+position = Vector2(4.285711, 65.71429)
+texture = ExtResource("7_affpi")
+
+[node name="3" type="Sprite2D" parent="Sprite/Stem/FrontLeaves" unique_id=1722203821]
+position = Vector2(-24.714289, 72.71429)
+texture = ExtResource("8_g6wyr")
+
+[node name="Head" type="Sprite2D" parent="Sprite" unique_id=1270842]
+position = Vector2(-6, -51)
+metadata/_edit_group_ = true
+
+[node name="Petal" type="Sprite2D" parent="Sprite/Head" unique_id=553393532]
+
+[node name="1" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=406969350]
+position = Vector2(-9, -22)
+texture = ExtResource("2_0v11v")
+
+[node name="2" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1371955168]
+position = Vector2(-15, -20)
+texture = ExtResource("4_tgrpd")
+
+[node name="3" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=661585857]
+position = Vector2(-22, -14)
+texture = ExtResource("5_gtr46")
+
+[node name="5" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1715190267]
+position = Vector2(-32, 1)
+texture = ExtResource("6_ys1a4")
+
+[node name="4" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1697491863]
+position = Vector2(-28, -7)
+texture = ExtResource("7_5lvb6")
+
+[node name="6" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1806978959]
+position = Vector2(-28, 10)
+texture = ExtResource("8_flm11")
+
+[node name="7" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1501335394]
+position = Vector2(-23, 17)
+texture = ExtResource("9_tuxos")
+
+[node name="8" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1540228678]
+position = Vector2(-14, 22)
+texture = ExtResource("10_5q3wm")
+
+[node name="9" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1077092567]
+position = Vector2(-2, 25)
+texture = ExtResource("11_fqrw3")
+
+[node name="10" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1958027184]
+position = Vector2(11, 23)
+texture = ExtResource("12_affpi")
+
+[node name="12" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=2061531722]
+position = Vector2(31, 8)
+texture = ExtResource("13_g6wyr")
+
+[node name="11" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1199377101]
+position = Vector2(17, 21)
+texture = ExtResource("14_qin4o")
+
+[node name="13" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1860532212]
+position = Vector2(33, 0)
+texture = ExtResource("15_1o5su")
+
+[node name="14" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=574521810]
+position = Vector2(31, -7)
+texture = ExtResource("16_hpj1w")
+
+[node name="15" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=568098905]
+position = Vector2(27, -12)
+texture = ExtResource("17_hkjyw")
+
+[node name="16" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=627373420]
+position = Vector2(20, -17)
+texture = ExtResource("18_15x1a")
+
+[node name="17" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1761730107]
+position = Vector2(14, -21)
+texture = ExtResource("19_n3ge8")
+
+[node name="18" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=1984456804]
+position = Vector2(2, -24)
+texture = ExtResource("20_40bn5")
+
+[node name="19" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=221694414]
+position = Vector2(28.000002, 14)
+rotation = 0.9221531
+texture = ExtResource("15_1o5su")
+
+[node name="20" type="Sprite2D" parent="Sprite/Head/Petal" unique_id=2014636154]
+position = Vector2(23, 19)
+rotation = 1.0092714
+texture = ExtResource("15_1o5su")
+
+[node name="Face" type="Sprite2D" parent="Sprite/Head" unique_id=700029614]
+texture = ExtResource("1_xfvvh")
+
+[node name="Leaves" type="Sprite2D" parent="Sprite" unique_id=162033666]
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=873043628]
+position = Vector2(-6, -37.5)
+shape = SubResource("RectangleShape2D_qin4o")
 
 [node name="SunTimer" type="Timer" parent="." unique_id=1514759686]
 
