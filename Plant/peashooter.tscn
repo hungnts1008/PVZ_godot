@@ -21,6 +21,7 @@ size = Vector2(94, 111)
 [node name="Peashooter" type="StaticBody2D" unique_id=744830110]
 position = Vector2(-7, 3)
 script = ExtResource("1_peashooter_script")
+muzzle_path = NodePath("")
 
 [node name="Sprite" type="Node2D" parent="." unique_id=687422644]
 position = Vector2(7, -3)
@@ -83,9 +84,6 @@ texture = ExtResource("11_d5h62")
 position = Vector2(7, -42.5)
 shape = SubResource("RectangleShape2D_3w80m")
 
-[node name="PeaPosition" type="Marker2D" parent="." unique_id=1117484557]
-position = Vector2(55, -72)
-
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1849814122]
 position = Vector2(56, -68)
 target_position = Vector2(705, 0)
@@ -96,3 +94,6 @@ script = ExtResource("2_target_detector")
 wait_time = 1.5
 script = ExtResource("3_shoot_timer")
 detector_path = NodePath("../RayCast2D")
+
+[node name="PeaPosition" type="Marker2D" parent="." unique_id=1117484557]
+position = Vector2(55, -72)
