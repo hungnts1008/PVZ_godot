@@ -12,8 +12,6 @@ animations = [{
 
 [node name="RegularZombie" type="CharacterBody2D" unique_id=301284323]
 collision_layer = 2
-collision_mask = 1
-groups = ["enemies"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=119724033]
 sprite_frames = SubResource("SpriteFrames_t6dk4")
