@@ -23,6 +23,7 @@ func _ready() -> void:
 
 func _on_shoot_requested(_target: Node2D) -> void:
 	# Peashooter in PVZ just shoots straight in its lane; target is informational.
+	print("shooting")
 	_shoot(Vector2.RIGHT)
 
 func _shoot(direction: Vector2) -> void:

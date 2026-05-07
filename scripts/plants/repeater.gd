@@ -32,6 +32,7 @@ func _ready() -> void:
 
 func _on_shoot_requested(_target: Node2D) -> void:
 	# Repeater fires 2 peas in a quick burst.
+	print("Shooting")
 	_shoot(Vector2.RIGHT)
 	_burst_pending = true
 	if not burst_timer.is_stopped():

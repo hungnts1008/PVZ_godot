@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://y25048usknro" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://fidj5joddtvy" path="res://art/images/PC _ Computer - Plants vs. Zombies - Backgrounds - Day.png" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://brqqyumbnoj3q" path="res://button/sun_flower_button.gd" id="3_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://cbdauhwt7aoii" path="res://Plant/peashooter.tscn" id="3_cegan"]
 [ext_resource type="Texture2D" uid="uid://w0o30qgc1i74" path="res://art/images/sun_flower.png" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://bkijqt8au1xon" path="res://enemy_test.tscn" id="4_82xsv"]
 [ext_resource type="Texture2D" uid="uid://c8w5gpocl5ygk" path="res://art/images/peashooter.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://bheiqmpqoi5pe" path="res://art/images/wall_nut.png" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://uq5o175rb7wd" path="res://button/pea_shooter_button.gd" id="6_dg77c"]
@@ -37,13 +35,6 @@ region_rect = Rect2(9.021851, 35.08326, 1395.1602, 599.09863)
 
 [node name="Camera2D" type="Camera2D" parent="Arena" unique_id=757124426]
 anchor_mode = 0
-
-[node name="Peashooter" parent="Arena" unique_id=744830110 instance=ExtResource("3_cegan")]
-position = Vector2(284, 349)
-scale = Vector2(0.6, 0.6)
-
-[node name="EnemyTest" parent="Arena" unique_id=657757612 instance=ExtResource("4_82xsv")]
-position = Vector2(537, 322)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=848004613]
 

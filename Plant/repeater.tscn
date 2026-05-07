@@ -25,6 +25,7 @@
 size = Vector2(94, 111)
 
 [node name="Repeater" type="StaticBody2D" unique_id=985354725]
+collision_mask = 2
 script = ExtResource("1_r4016")
 
 [node name="Sprite" type="Node2D" parent="." unique_id=593839167]
