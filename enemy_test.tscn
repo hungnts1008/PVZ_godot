@@ -1,13 +1,27 @@
 [gd_scene format=3 uid="uid://bkijqt8au1xon"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tg40w"]
-size = Vector2(76, 142)
+[ext_resource type="Texture2D" uid="uid://cl6ssuib511ax" path="res://art/assets/zombie/regural_zombie/attack/ZombieAttack_0.png" id="1_tekfo"]
 
-[node name="EnemyTest" type="Area2D" unique_id=657757612 groups=["enemies"]]
+[sub_resource type="SpriteFrames" id="SpriteFrames_tekfo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tekfo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tegdf"]
+size = Vector2(74, 114)
+
+[node name="EnemyTest" type="CharacterBody2D" unique_id=2146821291 groups=["enemies"]]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1200733237 groups=["enemies"]]
-light_mask = 0
-visibility_layer = 0
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_tg40w")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1742403422]
+position = Vector2(-25, -14)
+sprite_frames = SubResource("SpriteFrames_tekfo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=156321104]
+shape = SubResource("RectangleShape2D_tegdf")

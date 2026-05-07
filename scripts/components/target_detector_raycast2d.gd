@@ -26,7 +26,6 @@ func _physics_process(_delta: float) -> void:
 			if collider is CharacterBody2D:
 				var collider_2d: CharacterBody2D = collider
 				if required_group == StringName() or collider_2d.is_in_group(required_group):
-					print("shooting")
 					new_target = collider_2d
 	
 	if new_target != target:
