@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://d1bo1pual688k"]
+
+[ext_resource type="Texture2D" uid="uid://caqxrh8ih034v" path="res://art/assets/snow pea.png" id="1_te2em"]
+
+[resource]
+atlas = ExtResource("1_te2em")
+region = Rect2(90, 118, 17, 25)

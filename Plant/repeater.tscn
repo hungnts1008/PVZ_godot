@@ -1,17 +1,124 @@
 [gd_scene format=3 uid="uid://bt7agxc8gqlmt"]
 
 [ext_resource type="Script" uid="uid://0sgnuw7807ie" path="res://scripts/plants/repeater.gd" id="1_r4016"]
+[ext_resource type="Texture2D" uid="uid://c0wwycqfjoxtb" path="res://art/assets/Pea-shooter/hair2.tres" id="2_58fsm"]
 [ext_resource type="Script" uid="uid://cqatg702rrrs" path="res://scripts/components/target_detector_raycast2d.gd" id="2_xrg67"]
+[ext_resource type="Texture2D" uid="uid://cyh85b4xriavt" path="res://art/assets/Pea-shooter/hair3.tres" id="3_7vd63"]
+[ext_resource type="Texture2D" uid="uid://b34civfkltl25" path="res://art/assets/Pea-shooter/leaves5.tres" id="3_egu5c"]
 [ext_resource type="Script" uid="uid://b3wj88wn2l7so" path="res://scripts/components/shoot_timer.gd" id="3_pw6m4"]
+[ext_resource type="Texture2D" uid="uid://douig4w7c27y4" path="res://art/assets/Pea-shooter/leaves3.tres" id="4_j1645"]
+[ext_resource type="Texture2D" uid="uid://chi1d8p0efl3s" path="res://art/assets/Pea-shooter/hair4.tres" id="4_n6qjf"]
+[ext_resource type="Texture2D" uid="uid://cu3iikry86xv1" path="res://art/assets/Pea-shooter/hair5.tres" id="5_8csdl"]
+[ext_resource type="Texture2D" uid="uid://57p65q1c5aka" path="res://art/assets/Pea-shooter/leaves1.tres" id="5_k0wnr"]
+[ext_resource type="Texture2D" uid="uid://cv6iakflpkc24" path="res://art/assets/Pea-shooter/leaves8.tres" id="6_ecsxu"]
+[ext_resource type="Texture2D" uid="uid://d2l4ykkat0y33" path="res://art/assets/Pea-shooter/body2.tres" id="6_ijwp4"]
+[ext_resource type="Texture2D" uid="uid://btio0pkvsmlya" path="res://art/assets/Pea-shooter/body1.tres" id="7_7akcp"]
+[ext_resource type="Texture2D" uid="uid://c7056icxlfj8g" path="res://art/assets/Pea-shooter/leaves7.tres" id="7_p74us"]
+[ext_resource type="Texture2D" uid="uid://0dlte1fce5mr" path="res://art/assets/Pea-shooter/head.tres" id="8_58fsm"]
+[ext_resource type="Texture2D" uid="uid://0xjstuxlq2bo" path="res://art/assets/Pea-shooter/muzzle1.tres" id="9_7vd63"]
+[ext_resource type="Texture2D" uid="uid://nfckfq0ggjut" path="res://art/assets/Pea-shooter/leaves2.tres" id="10_n6qjf"]
+[ext_resource type="Texture2D" uid="uid://douj4c03cev4y" path="res://art/assets/Pea-shooter/leaves4.tres" id="11_8csdl"]
+[ext_resource type="Texture2D" uid="uid://8hqchhfakevk" path="res://art/assets/Pea-shooter/leaves6.tres" id="12_ecsxu"]
+[ext_resource type="Texture2D" uid="uid://b2hmkkym7cbj1" path="res://art/assets/Pea-shooter/eyebrow.tres" id="14_i4pcl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_woiip"]
+size = Vector2(94, 111)
 
 [node name="Repeater" type="StaticBody2D" unique_id=985354725]
 script = ExtResource("1_r4016")
 
-[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1122480624]
+[node name="Sprite" type="Node2D" parent="." unique_id=593839167]
+position = Vector2(7, -3)
 
-[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1579341784]
+[node name="Hair" type="Sprite2D" parent="Sprite" unique_id=221041739]
+position = Vector2(-46, -68)
+
+[node name="Hair1" type="Sprite2D" parent="Sprite/Hair" unique_id=233239975]
+position = Vector2(20, -17)
+texture = ExtResource("2_58fsm")
+
+[node name="Hair2" type="Sprite2D" parent="Sprite/Hair" unique_id=1189566666]
+position = Vector2(10, -12)
+texture = ExtResource("3_7vd63")
+
+[node name="Hair3" type="Sprite2D" parent="Sprite/Hair" unique_id=177477153]
+position = Vector2(9, 15)
+texture = ExtResource("4_n6qjf")
+
+[node name="Hair4" type="Sprite2D" parent="Sprite/Hair" unique_id=1176469611]
+position = Vector2(2, 9)
+texture = ExtResource("5_8csdl")
+
+[node name="Hair5" type="Sprite2D" parent="Sprite/Hair" unique_id=1035052693]
+position = Vector2(-8, 12)
+scale = Vector2(1, 1.0714285)
+texture = ExtResource("6_ecsxu")
+
+[node name="Hair6" type="Sprite2D" parent="Sprite/Hair" unique_id=1863427776]
+position = Vector2(0, -18)
+texture = ExtResource("7_p74us")
+
+[node name="LeaveBack" type="Sprite2D" parent="Sprite" unique_id=852618142]
+
+[node name="Leaves6" type="Sprite2D" parent="Sprite/LeaveBack" unique_id=163001227]
+position = Vector2(17.499996, -21)
+texture = ExtResource("3_egu5c")
+
+[node name="Leaves3" type="Sprite2D" parent="Sprite/LeaveBack" unique_id=613952302]
+position = Vector2(-3.5000038, -14)
+texture = ExtResource("4_j1645")
+
+[node name="Leaves1" type="Sprite2D" parent="Sprite/LeaveBack" unique_id=1851514001]
+position = Vector2(-29.5, 4)
+scale = Vector2(1.1363636, 1)
+texture = ExtResource("5_k0wnr")
+
+[node name="Body" type="Sprite2D" parent="Sprite" unique_id=1038397228]
+position = Vector2(-7, -1)
+
+[node name="Body2" type="Sprite2D" parent="Sprite/Body" unique_id=1067202932]
+position = Vector2(4.9999995, -13)
+scale = Vector2(1.0714285, 1.0526316)
+texture = ExtResource("6_ijwp4")
+
+[node name="Body3" type="Sprite2D" parent="Sprite/Body" unique_id=222955809]
+position = Vector2(0, -26)
+texture = ExtResource("7_7akcp")
+
+[node name="Head" type="Sprite2D" parent="Sprite" unique_id=1254682605]
+position = Vector2(-5, -63)
+texture = ExtResource("8_58fsm")
+
+[node name="Eyebrow" type="Sprite2D" parent="Sprite" unique_id=1489976490]
+position = Vector2(5, -82)
+texture = ExtResource("14_i4pcl")
+
+[node name="Muzzle" type="Sprite2D" parent="Sprite" unique_id=135202330]
+position = Vector2(39, -72.00001)
+scale = Vector2(1, 0.9583332)
+texture = ExtResource("9_7vd63")
+
+[node name="LeavesFront" type="Sprite2D" parent="Sprite" unique_id=1858699280]
+
+[node name="Leaves2" type="Sprite2D" parent="Sprite/LeavesFront" unique_id=1899190303]
+position = Vector2(-0.5000038, -1)
+texture = ExtResource("10_n6qjf")
+
+[node name="Leaves4" type="Sprite2D" parent="Sprite/LeavesFront" unique_id=1342218756]
+position = Vector2(32.499996, -5)
+texture = ExtResource("11_8csdl")
+
+[node name="Leaves5" type="Sprite2D" parent="Sprite/LeavesFront" unique_id=1706934215]
+position = Vector2(-22.500004, -18)
+texture = ExtResource("12_ecsxu")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=2105712219]
+position = Vector2(7, -42.5)
+shape = SubResource("RectangleShape2D_woiip")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1042138290]
+position = Vector2(57, -68)
+target_position = Vector2(539, -4)
 collision_mask = 2
 script = ExtResource("2_xrg67")
 
@@ -24,3 +131,4 @@ detector_path = NodePath("../RayCast2D")
 wait_time = 0.2
 
 [node name="PeaPosition" type="Marker2D" parent="." unique_id=2041016596]
+position = Vector2(57, -75)
