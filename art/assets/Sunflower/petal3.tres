@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://c0m30g8fjg7p4"]
+
+[ext_resource type="Texture2D" uid="uid://bitmejgp7e4yb" path="res://art/assets/sunflower.png" id="1_s6out"]
+
+[resource]
+atlas = ExtResource("1_s6out")
+region = Rect2(24, 91, 15, 14)
