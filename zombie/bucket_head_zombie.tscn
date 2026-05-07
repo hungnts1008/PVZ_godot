@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bosj0xdynobqt"]
+
+[ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="1_mdm51"]
+[ext_resource type="Texture2D" uid="uid://bl0xhxpu1glys" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_0.png" id="1_uxr7h"]
+[ext_resource type="Texture2D" uid="uid://bpoqd2oww3qrh" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_1.png" id="2_yk1or"]
+[ext_resource type="Texture2D" uid="uid://d0mkumcwpedr2" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_2.png" id="3_j3bb5"]
+[ext_resource type="Texture2D" uid="uid://cmvgn2ta3ne40" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_3.png" id="4_uhrem"]
+[ext_resource type="Texture2D" uid="uid://bslri53ajgh2u" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_4.png" id="5_11exw"]
+[ext_resource type="Texture2D" uid="uid://bfk6jx3gkcwt5" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_5.png" id="6_8x8wn"]
+[ext_resource type="Texture2D" uid="uid://d4dgtsc1q5tsj" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_6.png" id="7_o0yxc"]
+[ext_resource type="Texture2D" uid="uid://brmhs5julw81y" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_7.png" id="8_l5tkp"]
+[ext_resource type="Texture2D" uid="uid://clq323r0kkx30" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_8.png" id="9_jxamm"]
+[ext_resource type="Texture2D" uid="uid://cnaknl5myji56" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_9.png" id="10_bmbqy"]
+[ext_resource type="Texture2D" uid="uid://dvurcqabdidu7" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_10.png" id="11_h1u8m"]
+[ext_resource type="Texture2D" uid="uid://enhgis0vj3vg" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_0.png" id="12_i2d1m"]
+[ext_resource type="Texture2D" uid="uid://bx60xm0x4wlcf" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_1.png" id="13_k5dpx"]
+[ext_resource type="Texture2D" uid="uid://dpf23uq8ux6i5" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_2.png" id="14_7vrnq"]
+[ext_resource type="Texture2D" uid="uid://dgpgjf5gdoiat" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_3.png" id="15_fclgk"]
+[ext_resource type="Texture2D" uid="uid://6xnx1lb0ed1q" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_4.png" id="16_a74eb"]
+[ext_resource type="Texture2D" uid="uid://ddijcja47a3ln" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_5.png" id="17_hhp82"]
+[ext_resource type="Texture2D" uid="uid://csssid8gt67mw" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_6.png" id="18_vyinr"]
+[ext_resource type="Texture2D" uid="uid://bved31yuplr0g" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_7.png" id="19_nk6aq"]
+[ext_resource type="Texture2D" uid="uid://bjwt1p3wv4ick" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_8.png" id="20_718sp"]
+[ext_resource type="Texture2D" uid="uid://cjseev881v0yo" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_9.png" id="21_11ig1"]
+[ext_resource type="Texture2D" uid="uid://cn1r1rl0sa1n6" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_10.png" id="22_tq8yl"]
+[ext_resource type="Texture2D" uid="uid://calfusyrtlgh2" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_11.png" id="23_p6q5n"]
+[ext_resource type="Texture2D" uid="uid://di1dx8ten5xj8" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_12.png" id="24_150cd"]
+[ext_resource type="Texture2D" uid="uid://hd6vkwkxw3ow" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_13.png" id="25_hn5a3"]
+[ext_resource type="Texture2D" uid="uid://c0k1d0i3pcm5y" path="res://art/assets/zombie/bucket_head_zombie/walk/BucketheadZombie_14.png" id="26_e6vjf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3okk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uxr7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yk1or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j3bb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uhrem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_11exw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8x8wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o0yxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l5tkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jxamm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bmbqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_h1u8m")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_i2d1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k5dpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7vrnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fclgk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_a74eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hhp82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_vyinr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_nk6aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_718sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_11ig1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_tq8yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_p6q5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_150cd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_hn5a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_e6vjf")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxr7h"]
+size = Vector2(85, 133)
+
+[node name="Bucket_head_zombie" type="CharacterBody2D" unique_id=1458318708 groups=["zombies"]]
+collision_layer = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=449933546]
+sprite_frames = SubResource("SpriteFrames_g3okk")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1483734904]
+position = Vector2(9.5, 4.5)
+shape = SubResource("RectangleShape2D_uxr7h")
+
+[node name="Health" type="Node" parent="." unique_id=1192676687]
+script = ExtResource("1_mdm51")
+metadata/_custom_type_script = "uid://becfw0mmeuptq"
+
+[node name="Timer" type="Timer" parent="." unique_id=375259194]
