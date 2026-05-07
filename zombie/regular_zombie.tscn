@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b1n8ap1nbkg3a"]
+
+[ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="1_t4dqq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6dk4"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="RegularZombie" type="CharacterBody2D" unique_id=301284323]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=119724033]
+sprite_frames = SubResource("SpriteFrames_t6dk4")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=605138161]
+
+[node name="Timer" type="Timer" parent="." unique_id=798005704]
+
+[node name="Health" type="Node" parent="." unique_id=831132430]
+script = ExtResource("1_t4dqq")
+metadata/_custom_type_script = "uid://becfw0mmeuptq"
