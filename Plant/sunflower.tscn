@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://k0vip8rt1q8p" path="res://art/assets/Sunflower/leaves2.tres" id="1_flm11"]
 [ext_resource type="Texture2D" uid="uid://cv5ducrvhq4k5" path="res://art/assets/Sunflower/body2.tres" id="1_tlrh7"]
+[ext_resource type="Script" uid="uid://dbn5a138hapln" path="res://scripts/plants/sunflower.gd" id="1_tuxos"]
 [ext_resource type="Texture2D" uid="uid://d2327lqf2bd08" path="res://art/assets/Sunflower/head.tres" id="1_xfvvh"]
 [ext_resource type="Texture2D" uid="uid://bd16gh5uv87g" path="res://art/assets/Sunflower/petal1.tres" id="2_0v11v"]
 [ext_resource type="Texture2D" uid="uid://dwn2l7n1npdi2" path="res://art/assets/Sunflower/body1.tres" id="2_0yxkg"]
@@ -32,6 +33,7 @@
 size = Vector2(70, 81)
 
 [node name="Sunflower" type="StaticBody2D" unique_id=875610985]
+script = ExtResource("1_tuxos")
 
 [node name="Sprite" type="Node2D" parent="." unique_id=1853535742]
 
@@ -180,5 +182,10 @@ position = Vector2(-6, -37.5)
 shape = SubResource("RectangleShape2D_qin4o")
 
 [node name="SunTimer" type="Timer" parent="." unique_id=1514759686]
+wait_time = 20.0
 
 [node name="SunPosition" type="Marker2D" parent="." unique_id=815546867]
+position = Vector2(-3, -51)
+
+[node name="GlowTimer" type="Timer" parent="." unique_id=1508134422]
+wait_time = 0.75
