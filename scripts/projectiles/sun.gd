@@ -26,7 +26,9 @@ func _ready() -> void:
 	_life_left = lifetime_sec
 	input_pickable = true
 	monitoring = true
-	_start_spawn_motion()
+	# Defer so spawners can set global_position after add_child().
+	# Otherwise the tween may be computed from the default position and look like it "falls twice".
+	call_deferred("_start_spawn_motion")
 
 
 func setup(new_amount: int = 25, new_collect_target_path: NodePath = NodePath()) -> void:
@@ -43,6 +45,11 @@ func _physics_process(delta: float) -> void:
 		queue_free()
 
 func _start_spawn_motion() -> void:
+	if _is_collected:
+		return
+	if _spawn_tween != null and _spawn_tween.is_running():
+		_spawn_tween.kill()
+
 	var start_pos := global_position
 	var rise_pos := start_pos + Vector2(0, -abs(rise_height))
 	var fall_pos := rise_pos + Vector2(0, abs(fall_distance))
