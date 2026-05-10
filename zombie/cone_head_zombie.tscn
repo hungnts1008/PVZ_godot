@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://80i2csp36d8e" path="res://art/assets/zombie/cone_head_zombie/attack/ConeheadZombieAttack_0.png" id="1_2yb7b"]
 [ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="1_6qidd"]
+[ext_resource type="Script" uid="uid://s4r5g3gpurgh" path="res://zombie/zombie.gd" id="1_cy5nr"]
 [ext_resource type="Texture2D" uid="uid://cv6ap2py4w15e" path="res://art/assets/zombie/cone_head_zombie/attack/ConeheadZombieAttack_1.png" id="2_cy5nr"]
 [ext_resource type="Texture2D" uid="uid://b3h0y2t3iebyv" path="res://art/assets/zombie/cone_head_zombie/attack/ConeheadZombieAttack_2.png" id="3_8lx88"]
 [ext_resource type="Texture2D" uid="uid://brxem5p53snil" path="res://art/assets/zombie/cone_head_zombie/attack/ConeheadZombieAttack_3.png" id="4_o6m4o"]
@@ -146,8 +147,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2yb7b"]
 size = Vector2(87, 140)
 
-[node name="ConeHeadZombie" type="CharacterBody2D" unique_id=2147261502]
+[node name="ConeHeadZombie" type="CharacterBody2D" unique_id=2147261502 groups=["enemies"]]
 collision_layer = 2
+script = ExtResource("1_cy5nr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=310787783]
 sprite_frames = SubResource("SpriteFrames_a0qwm")
