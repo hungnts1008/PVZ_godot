@@ -122,7 +122,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uxr7h"]
 size = Vector2(85, 133)
 
-[node name="Bucket_head_zombie" type="CharacterBody2D" unique_id=1458318708 groups=["zombies"]]
+[node name="Bucket_head_zombie" type="CharacterBody2D" unique_id=1458318708 groups=["enemies"]]
 collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=449933546]

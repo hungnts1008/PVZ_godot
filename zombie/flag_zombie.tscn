@@ -168,7 +168,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6etfw"]
 size = Vector2(97, 114)
 
-[node name="FlagZombie" type="CharacterBody2D" unique_id=25038383]
+[node name="FlagZombie" type="CharacterBody2D" unique_id=25038383 groups=["enemies"]]
 collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1283166626]
