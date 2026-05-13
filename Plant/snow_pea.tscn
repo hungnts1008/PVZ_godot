@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://nfckfq0ggjut" path="res://art/assets/Pea-shooter/leaves2.tres" id="13_yxgtg"]
 [ext_resource type="Texture2D" uid="uid://douj4c03cev4y" path="res://art/assets/Pea-shooter/leaves4.tres" id="14_5dug0"]
 [ext_resource type="Texture2D" uid="uid://8hqchhfakevk" path="res://art/assets/Pea-shooter/leaves6.tres" id="15_7efmw"]
+[ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="18_8kiym"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bi28a"]
 size = Vector2(94, 111)
@@ -111,3 +112,8 @@ detector_path = NodePath("../RayCast2D")
 
 [node name="PeaPosition" type="Marker2D" parent="." unique_id=1989611240]
 position = Vector2(46, -72)
+
+[node name="Health" type="Node" parent="." unique_id=501148526]
+script = ExtResource("18_8kiym")
+max_hp = 300
+hp = 300

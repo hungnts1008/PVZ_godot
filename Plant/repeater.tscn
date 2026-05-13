@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://douj4c03cev4y" path="res://art/assets/Pea-shooter/leaves4.tres" id="11_8csdl"]
 [ext_resource type="Texture2D" uid="uid://8hqchhfakevk" path="res://art/assets/Pea-shooter/leaves6.tres" id="12_ecsxu"]
 [ext_resource type="Texture2D" uid="uid://b2hmkkym7cbj1" path="res://art/assets/Pea-shooter/eyebrow.tres" id="14_i4pcl"]
+[ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="21_7vd63"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_woiip"]
 size = Vector2(94, 111)
@@ -133,3 +134,8 @@ wait_time = 0.2
 
 [node name="PeaPosition" type="Marker2D" parent="." unique_id=2041016596]
 position = Vector2(57, -75)
+
+[node name="Health" type="Node" parent="." unique_id=1634677953]
+script = ExtResource("21_7vd63")
+max_hp = 300
+hp = 300
