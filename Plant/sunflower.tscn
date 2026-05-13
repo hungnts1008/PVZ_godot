@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://ba03133romi7g" path="res://art/assets/Sunflower/petal11.tres" id="18_15x1a"]
 [ext_resource type="Texture2D" uid="uid://dkrunaj07lf4i" path="res://art/assets/Sunflower/petal10.tres" id="19_n3ge8"]
 [ext_resource type="Texture2D" uid="uid://bq10g026nmfh3" path="res://art/assets/Sunflower/petal18.tres" id="20_40bn5"]
+[ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="29_5q3wm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qin4o"]
 size = Vector2(70, 81)
@@ -189,3 +190,8 @@ position = Vector2(-3, -51)
 
 [node name="GlowTimer" type="Timer" parent="." unique_id=1508134422]
 wait_time = 0.75
+
+[node name="Health" type="Node" parent="." unique_id=1065264093]
+script = ExtResource("29_5q3wm")
+max_hp = 300
+hp = 300
