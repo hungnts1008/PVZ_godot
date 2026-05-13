@@ -4,6 +4,8 @@ class_name Health
 signal damaged(amount: int, current_hp: int)
 signal died
 
+var _death_emit_queued: bool = false
+
 @export var max_hp: int = 100:
 	set(value):
 		max_hp = max(value, 1)
@@ -11,9 +13,25 @@ signal died
 
 @export var hp: int = 100:
 	set(value):
+		var previous_hp := hp
 		hp = clamp(value, 0, max_hp)
-		if hp == 0:
-			died.emit()
+		# If hp is set to 0 during scene instantiation (Inspector), listeners may not
+		# be connected yet. Defer emission so consumers like PlantBase can connect in _ready().
+		if previous_hp > 0 and hp == 0:
+			_queue_died_emit()
+
+
+func _queue_died_emit() -> void:
+	if _death_emit_queued:
+		return
+	_death_emit_queued = true
+	call_deferred("_emit_died_if_still_dead")
+
+
+func _emit_died_if_still_dead() -> void:
+	_death_emit_queued = false
+	if hp <= 0:
+		died.emit()
 
 func damage(amount: int) -> void:
 	if amount <= 0 or hp == 0:
