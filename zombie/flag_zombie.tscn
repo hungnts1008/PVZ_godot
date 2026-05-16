@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bdcetut2jchnf" path="res://art/assets/zombie/flag_zombie/walk/FlagZombie_0.png" id="1_5vu6s"]
 [ext_resource type="Texture2D" uid="uid://dhrhnlynmym5n" path="res://art/assets/zombie/flag_zombie/lost_head/FlagZombieLostHead_0.png" id="1_iqh8i"]
+[ext_resource type="Script" uid="uid://s4r5g3gpurgh" path="res://zombie/zombie.gd" id="1_l8jvv"]
 [ext_resource type="Texture2D" uid="uid://dfo6cmx1siy81" path="res://art/assets/zombie/flag_zombie/walk/FlagZombie_1.png" id="2_iukj5"]
 [ext_resource type="Texture2D" uid="uid://dmlpahlwudpo5" path="res://art/assets/zombie/flag_zombie/lost_head/FlagZombieLostHead_1.png" id="2_smjx5"]
 [ext_resource type="Texture2D" uid="uid://shhkqe31ca4u" path="res://art/assets/zombie/flag_zombie/walk/FlagZombie_2.png" id="3_11fpj"]
