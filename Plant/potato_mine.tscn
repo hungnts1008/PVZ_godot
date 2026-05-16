@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://70by10w1o5kd" path="res://art/assets/Potato-mine/light-on.tres" id="10_xpxgn"]
 [ext_resource type="Texture2D" uid="uid://cocgxpr4f78ia" path="res://art/assets/Potato-mine/rock2.tres" id="11_2r1e2"]
 [ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="12_jn6al"]
+[ext_resource type="Script" uid="uid://brkq8bby5emww" path="res://scripts/plants/potato_mine.gd" id="13_potato_mine_script"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4a345"]
 animations = [{
@@ -23,168 +24,228 @@ animations = [{
 "texture": ExtResource("10_xpxgn")
 }],
 "loop": true,
-"name": &"blink",
+"name": &"blink_fast",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xpxgn")
+}],
+"loop": true,
+"name": &"blink_slow",
 "speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sek14"]
-size = Vector2(102.666664, 53.333332)
+size = Vector2(62.666668, 53.333332)
 
-[node name="PotatoMine1" type="StaticBody2D" unique_id=1763113150]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5owku"]
+size = Vector2(378.6667, 50.66667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l4wsb"]
+size = Vector2(64, 53.333336)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q4rg"]
+size = Vector2(144, 52.000004)
+
+[node name="PotatoMine" type="StaticBody2D" unique_id=1763113150]
 scale = Vector2(0.75, 0.75)
 collision_mask = 2
+script = ExtResource("13_potato_mine_script")
+health_path = NodePath("Health")
 
-[node name="Sprite2" type="Node2D" parent="." unique_id=2062537755]
+[node name="Sprite1" type="Node2D" parent="." unique_id=2062537755]
 
-[node name="Stem" type="Sprite2D" parent="Sprite2" unique_id=925457400]
+[node name="Stem" type="Sprite2D" parent="Sprite1" unique_id=925457400]
 z_index = 1
-position = Vector2(0.5333328, 4.666666)
+position = Vector2(0.19309235, -6.666668)
 texture = ExtResource("1_okxba")
 
-[node name="Bulb" type="Sprite2D" parent="Sprite2" unique_id=1321724621]
+[node name="Bulb" type="Sprite2D" parent="Sprite1" unique_id=1321724621]
 z_index = 1
-position = Vector2(1.8666662, -8.666668)
+position = Vector2(1.5264257, -20.000002)
 texture = ExtResource("2_5owku")
 
-[node name="Rock" type="Sprite2D" parent="Sprite2" unique_id=1718487983]
+[node name="Rock" type="Sprite2D" parent="Sprite1" unique_id=1718487983]
+metadata/_edit_group_ = true
 
-[node name="1" type="Sprite2D" parent="Sprite2/Rock" unique_id=156042541]
-position = Vector2(-6.1333337, 11.333335)
+[node name="1" type="Sprite2D" parent="Sprite1/Rock" unique_id=156042541]
+position = Vector2(-6.473574, 0)
 scale = Vector2(0.92424244, 1.0555556)
 texture = ExtResource("3_l4wsb")
 
-[node name="2" type="Sprite2D" parent="Sprite2/Rock" unique_id=1181659219]
+[node name="2" type="Sprite2D" parent="Sprite1/Rock" unique_id=1181659219]
 z_index = 1
-position = Vector2(-19.466667, 14)
+position = Vector2(-19.806908, 2.666666)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_5q4rg")
 
-[node name="3" type="Sprite2D" parent="Sprite2/Rock" unique_id=385120394]
+[node name="3" type="Sprite2D" parent="Sprite1/Rock" unique_id=385120394]
 z_index = 1
-position = Vector2(-8.8, 15.333332)
+position = Vector2(-9.140241, 3.999999)
 scale = Vector2(0.93333334, 0.9333334)
 texture = ExtResource("5_j7xst")
 
-[node name="6" type="Sprite2D" parent="Sprite2/Rock" unique_id=1351631488]
-position = Vector2(13.866666, 11.333334)
+[node name="6" type="Sprite2D" parent="Sprite1/Rock" unique_id=1351631488]
+position = Vector2(13.526425, 0)
 scale = Vector2(0.48301324, 0.4495152)
 texture = ExtResource("6_yjdag")
 
-[node name="5" type="Sprite2D" parent="Sprite2/Rock" unique_id=71627653]
+[node name="5" type="Sprite2D" parent="Sprite1/Rock" unique_id=71627653]
 z_index = 1
-position = Vector2(15.199999, 12.72)
+position = Vector2(14.859758, 1.3866663)
 scale = Vector2(0.9333334, 0.96)
 texture = ExtResource("7_qht1q")
 
-[node name="4" type="Sprite2D" parent="Sprite2/Rock" unique_id=757844413]
+[node name="4" type="Sprite2D" parent="Sprite1/Rock" unique_id=757844413]
 z_index = 1
-position = Vector2(1.866666, 16.666668)
+position = Vector2(1.5264255, 5.333333)
 scale = Vector2(0.9333334, 0.82222223)
 texture = ExtResource("3_l4wsb")
 
-[node name="Sprite1" type="Node2D" parent="." unique_id=235181176]
+[node name="Sprite2" type="Node2D" parent="." unique_id=235181176]
 
-[node name="Body" type="Sprite2D" parent="Sprite1" unique_id=295469037]
+[node name="Body" type="Sprite2D" parent="Sprite2" unique_id=295469037]
 z_index = 1
-position = Vector2(0, -9.333334)
+position = Vector2(-0.34024048, -20.666668)
 texture = ExtResource("8_o7iy2")
 
-[node name="Eyes" type="Sprite2D" parent="Sprite1" unique_id=1871286555]
+[node name="Eyes" type="Sprite2D" parent="Sprite2" unique_id=1871286555]
 z_index = 1
-position = Vector2(13.333334, -1.3333334)
+position = Vector2(12.9930935, -12.666667)
 texture = ExtResource("9_h8f1d")
 
-[node name="Bulb" type="AnimatedSprite2D" parent="Sprite1" unique_id=352506655]
+[node name="Bulb" type="AnimatedSprite2D" parent="Sprite2" unique_id=352506655]
 z_index = 1
-position = Vector2(1.3333334, -46.666668)
+position = Vector2(0.9930929, -58)
 sprite_frames = SubResource("SpriteFrames_4a345")
-animation = &"blink"
+animation = &"blink_slow"
 
-[node name="Rocks" type="Sprite2D" parent="Sprite1" unique_id=1360250082]
+[node name="Rocks" type="Sprite2D" parent="Sprite2" unique_id=1360250082]
 show_behind_parent = true
+metadata/_edit_group_ = true
 
-[node name="1" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1911895005]
+[node name="1" type="Sprite2D" parent="Sprite2/Rocks" unique_id=1911895005]
 show_behind_parent = true
-position = Vector2(-44, 8.000001)
+position = Vector2(-44, -4)
 scale = Vector2(0.8137254, 0.80701756)
 texture = ExtResource("11_2r1e2")
 
-[node name="2" type="Sprite2D" parent="Sprite1/Rocks" unique_id=904962147]
-top_level = true
-z_index = 1
-position = Vector2(-37, 10.000001)
+[node name="2" type="Sprite2D" parent="Sprite2/Rocks" unique_id=904962147]
+z_index = 2
+position = Vector2(-46.666676, 1.333334)
 rotation = -3.403392
-scale = Vector2(0.7602272, 0.7736177)
+scale = Vector2(1.1576436, 1.1368535)
 texture = ExtResource("4_5q4rg")
 
-[node name="3" type="Sprite2D" parent="Sprite1/Rocks" unique_id=2014094391]
-top_level = true
-z_index = 1
-position = Vector2(-28, 10.999999)
-scale = Vector2(0.77272725, 0.8750001)
+[node name="3" type="Sprite2D" parent="Sprite2/Rocks" unique_id=2014094391]
+z_index = 2
+position = Vector2(-33.333332, 2.6666667)
+scale = Vector2(0.9090908, 1.109375)
 texture = ExtResource("3_l4wsb")
 
-[node name="5" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1625173312]
-top_level = true
-z_index = 1
-position = Vector2(-11, 11)
-scale = Vector2(0.5, 0.5)
+[node name="5" type="Sprite2D" parent="Sprite2/Rocks" unique_id=1625173312]
+z_index = 2
+position = Vector2(-13.333333, 4)
+scale = Vector2(0.57142854, 0.6209372)
 texture = ExtResource("6_yjdag")
 
-[node name="4" type="Sprite2D" parent="Sprite1/Rocks" unique_id=151438970]
-top_level = true
-z_index = 1
-position = Vector2(-18, 11.999999)
+[node name="4" type="Sprite2D" parent="Sprite2/Rocks" unique_id=151438970]
+z_index = 2
+position = Vector2(-22.666668, 5.333333)
 rotation = 3.1415927
-scale = Vector2(0.75332564, 0.72973853)
+scale = Vector2(0.95760655, 0.959554)
 texture = ExtResource("5_j7xst")
 
-[node name="6" type="Sprite2D" parent="Sprite1/Rocks" unique_id=291019732]
-top_level = true
-z_index = 1
-position = Vector2(-1.9999998, 12)
+[node name="6" type="Sprite2D" parent="Sprite2/Rocks" unique_id=291019732]
+z_index = 2
+position = Vector2(-2.6666665, 4)
 rotation = -0.2617994
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.8702369, 0.9686806)
 texture = ExtResource("7_qht1q")
 
-[node name="7" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1441035392]
-top_level = true
-z_index = 1
-position = Vector2(9, 15)
-scale = Vector2(0.8, 0.8)
+[node name="7" type="Sprite2D" parent="Sprite2/Rocks" unique_id=1441035392]
+z_index = 2
+position = Vector2(11.999998, 6.6666665)
+scale = Vector2(1.0090909, 1.1999999)
 texture = ExtResource("3_l4wsb")
 
-[node name="8" type="Sprite2D" parent="Sprite1/Rocks" unique_id=492595671]
-top_level = true
-z_index = 1
-position = Vector2(18, 14.000001)
+[node name="8" type="Sprite2D" parent="Sprite2/Rocks" unique_id=492595671]
+z_index = 2
+position = Vector2(23.999998, 6.666667)
 rotation = -1.5707964
-scale = Vector2(0.8, 0.8)
+scale = Vector2(1.0808867, 1.1064209)
 texture = ExtResource("5_j7xst")
 
-[node name="9" type="Sprite2D" parent="Sprite1/Rocks" unique_id=616947013]
-top_level = true
-z_index = 1
-position = Vector2(27, 11)
+[node name="9" type="Sprite2D" parent="Sprite2/Rocks" unique_id=616947013]
+z_index = 2
+position = Vector2(36.04617, 2.5285993)
+scale = Vector2(1.3287166, 1.3530571)
 texture = ExtResource("4_5q4rg")
 
-[node name="10" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1004376581]
-top_level = true
-z_index = 1
-position = Vector2(37.000004, 9.000002)
-rotation = 2.8797934
-scale = Vector2(0.8, 0.8)
+[node name="10" type="Sprite2D" parent="Sprite2/Rocks" unique_id=1004376581]
+z_index = 2
+position = Vector2(49.333332, 1.3333334)
+rotation = 3.1415927
+scale = Vector2(1.0137062, 1.0958267)
 texture = ExtResource("7_qht1q")
 
-[node name="11" type="Sprite2D" parent="Sprite1/Rocks" unique_id=507494713]
+[node name="11" type="Sprite2D" parent="Sprite2/Rocks" unique_id=507494713]
 z_index = 1
-position = Vector2(42.666664, 5.3333335)
+position = Vector2(42.326424, -6.0000005)
 texture = ExtResource("3_l4wsb")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=691711558]
 z_index = 2
-position = Vector2(0, -8)
+position = Vector2(0.32642496, -19.333334)
 shape = SubResource("RectangleShape2D_sek14")
+
+[node name="NearArea" type="Area2D" parent="." unique_id=265950132]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NearArea" unique_id=1436885780]
+position = Vector2(0, -20.000004)
+shape = SubResource("RectangleShape2D_5owku")
+debug_color = Color(0.8443809, 0.32073557, 0.5305815, 0.41960785)
+
+[node name="TriggerArea" type="Area2D" parent="." unique_id=1886088523]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" unique_id=211306965]
+position = Vector2(-3.1789145e-07, -18.666668)
+shape = SubResource("RectangleShape2D_l4wsb")
+debug_color = Color(0.013459018, 0.15280211, 0.1425632, 0.41960785)
+
+[node name="ExplosionArea" type="Area2D" parent="." unique_id=557603585]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" unique_id=732032290]
+position = Vector2(0, -19.333334)
+shape = SubResource("RectangleShape2D_5q4rg")
 
 [node name="GrowTimer" type="Timer" parent="." unique_id=1008458558]
 wait_time = 14.0
@@ -192,3 +253,5 @@ one_shot = true
 
 [node name="Health" type="Node" parent="." unique_id=2128954781]
 script = ExtResource("12_jn6al")
+max_hp = 300
+hp = 300
