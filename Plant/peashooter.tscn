@@ -20,6 +20,7 @@
 size = Vector2(94, 111)
 
 [node name="Peashooter" type="StaticBody2D" unique_id=744830110]
+scale = Vector2(0.75, 0.75)
 collision_mask = 2
 script = ExtResource("1_peashooter_script")
 health_path = NodePath("Health")

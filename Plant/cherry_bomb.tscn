@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4iqgojh86002"]
 
 [node name="CherryBomb" type="Area2D" unique_id=1969799228]
+scale = Vector2(0.75, 0.75)
 metadata/_edit_group_ = true
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1544522452]

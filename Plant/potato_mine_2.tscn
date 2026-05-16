@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdkw5iuwl6oxt"]
 
 [node name="PotatoMine2" type="Area2D" unique_id=2076650340]
+scale = Vector2(0.75, 0.75)
 metadata/_edit_group_ = true
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1997244706]

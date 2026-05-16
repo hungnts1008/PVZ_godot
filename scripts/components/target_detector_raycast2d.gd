@@ -21,7 +21,6 @@ func _physics_process(_delta: float) -> void:
 		# if the plant is spawned mid-frame.
 		force_raycast_update()
 		if is_colliding():
-			print("colliding")
 			var collider := get_collider()
 			if collider is CharacterBody2D:
 				var collider_2d: CharacterBody2D = collider
