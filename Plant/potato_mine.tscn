@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://bnbte6hm4t1y0"]
+
+[ext_resource type="Texture2D" uid="uid://imta2qy8lv0b" path="res://art/assets/Potato-mine/stem.tres" id="1_okxba"]
+[ext_resource type="Texture2D" uid="uid://cwydo8navaxyg" path="res://art/assets/Potato-mine/light-off.tres" id="2_5owku"]
+[ext_resource type="Texture2D" uid="uid://duvcilxnu8leu" path="res://art/assets/Potato-mine/rock5.tres" id="3_l4wsb"]
+[ext_resource type="Texture2D" uid="uid://cth6u8g6g8yh1" path="res://art/assets/Potato-mine/rock6.tres" id="4_5q4rg"]
+[ext_resource type="Texture2D" uid="uid://c5n3ru72sutmp" path="res://art/assets/Potato-mine/rock1.tres" id="5_j7xst"]
+[ext_resource type="Texture2D" uid="uid://dh5herg0m6pxj" path="res://art/assets/Potato-mine/rock4.tres" id="6_yjdag"]
+[ext_resource type="Texture2D" uid="uid://d3xyye6bejcxn" path="res://art/assets/Potato-mine/rock3.tres" id="7_qht1q"]
+[ext_resource type="Texture2D" uid="uid://rr8udtjckhag" path="res://art/assets/Potato-mine/body.tres" id="8_o7iy2"]
+[ext_resource type="Texture2D" uid="uid://cr7u2a67qjnav" path="res://art/assets/Potato-mine/eyes1.tres" id="9_h8f1d"]
+[ext_resource type="Texture2D" uid="uid://70by10w1o5kd" path="res://art/assets/Potato-mine/light-on.tres" id="10_xpxgn"]
+[ext_resource type="Texture2D" uid="uid://cocgxpr4f78ia" path="res://art/assets/Potato-mine/rock2.tres" id="11_2r1e2"]
+[ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="12_jn6al"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4a345"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5owku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xpxgn")
+}],
+"loop": true,
+"name": &"blink",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sek14"]
+size = Vector2(102.666664, 53.333332)
+
+[node name="PotatoMine1" type="StaticBody2D" unique_id=1763113150]
+scale = Vector2(0.75, 0.75)
+collision_mask = 2
+
+[node name="Sprite2" type="Node2D" parent="." unique_id=2062537755]
+
+[node name="Stem" type="Sprite2D" parent="Sprite2" unique_id=925457400]
+z_index = 1
+position = Vector2(0.5333328, 4.666666)
+texture = ExtResource("1_okxba")
+
+[node name="Bulb" type="Sprite2D" parent="Sprite2" unique_id=1321724621]
+z_index = 1
+position = Vector2(1.8666662, -8.666668)
+texture = ExtResource("2_5owku")
+
+[node name="Rock" type="Sprite2D" parent="Sprite2" unique_id=1718487983]
+
+[node name="1" type="Sprite2D" parent="Sprite2/Rock" unique_id=156042541]
+position = Vector2(-6.1333337, 11.333335)
+scale = Vector2(0.92424244, 1.0555556)
+texture = ExtResource("3_l4wsb")
+
+[node name="2" type="Sprite2D" parent="Sprite2/Rock" unique_id=1181659219]
+z_index = 1
+position = Vector2(-19.466667, 14)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_5q4rg")
+
+[node name="3" type="Sprite2D" parent="Sprite2/Rock" unique_id=385120394]
+z_index = 1
+position = Vector2(-8.8, 15.333332)
+scale = Vector2(0.93333334, 0.9333334)
+texture = ExtResource("5_j7xst")
+
+[node name="6" type="Sprite2D" parent="Sprite2/Rock" unique_id=1351631488]
+position = Vector2(13.866666, 11.333334)
+scale = Vector2(0.48301324, 0.4495152)
+texture = ExtResource("6_yjdag")
+
+[node name="5" type="Sprite2D" parent="Sprite2/Rock" unique_id=71627653]
+z_index = 1
+position = Vector2(15.199999, 12.72)
+scale = Vector2(0.9333334, 0.96)
+texture = ExtResource("7_qht1q")
+
+[node name="4" type="Sprite2D" parent="Sprite2/Rock" unique_id=757844413]
+z_index = 1
+position = Vector2(1.866666, 16.666668)
+scale = Vector2(0.9333334, 0.82222223)
+texture = ExtResource("3_l4wsb")
+
+[node name="Sprite1" type="Node2D" parent="." unique_id=235181176]
+
+[node name="Body" type="Sprite2D" parent="Sprite1" unique_id=295469037]
+z_index = 1
+position = Vector2(0, -9.333334)
+texture = ExtResource("8_o7iy2")
+
+[node name="Eyes" type="Sprite2D" parent="Sprite1" unique_id=1871286555]
+z_index = 1
+position = Vector2(13.333334, -1.3333334)
+texture = ExtResource("9_h8f1d")
+
+[node name="Bulb" type="AnimatedSprite2D" parent="Sprite1" unique_id=352506655]
+z_index = 1
+position = Vector2(1.3333334, -46.666668)
+sprite_frames = SubResource("SpriteFrames_4a345")
+animation = &"blink"
+
+[node name="Rocks" type="Sprite2D" parent="Sprite1" unique_id=1360250082]
+show_behind_parent = true
+
+[node name="1" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1911895005]
+show_behind_parent = true
+position = Vector2(-44, 8.000001)
+scale = Vector2(0.8137254, 0.80701756)
+texture = ExtResource("11_2r1e2")
+
+[node name="2" type="Sprite2D" parent="Sprite1/Rocks" unique_id=904962147]
+top_level = true
+z_index = 1
+position = Vector2(-37, 10.000001)
+rotation = -3.403392
+scale = Vector2(0.7602272, 0.7736177)
+texture = ExtResource("4_5q4rg")
+
+[node name="3" type="Sprite2D" parent="Sprite1/Rocks" unique_id=2014094391]
+top_level = true
+z_index = 1
+position = Vector2(-28, 10.999999)
+scale = Vector2(0.77272725, 0.8750001)
+texture = ExtResource("3_l4wsb")
+
+[node name="5" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1625173312]
+top_level = true
+z_index = 1
+position = Vector2(-11, 11)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_yjdag")
+
+[node name="4" type="Sprite2D" parent="Sprite1/Rocks" unique_id=151438970]
+top_level = true
+z_index = 1
+position = Vector2(-18, 11.999999)
+rotation = 3.1415927
+scale = Vector2(0.75332564, 0.72973853)
+texture = ExtResource("5_j7xst")
+
+[node name="6" type="Sprite2D" parent="Sprite1/Rocks" unique_id=291019732]
+top_level = true
+z_index = 1
+position = Vector2(-1.9999998, 12)
+rotation = -0.2617994
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("7_qht1q")
+
+[node name="7" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1441035392]
+top_level = true
+z_index = 1
+position = Vector2(9, 15)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_l4wsb")
+
+[node name="8" type="Sprite2D" parent="Sprite1/Rocks" unique_id=492595671]
+top_level = true
+z_index = 1
+position = Vector2(18, 14.000001)
+rotation = -1.5707964
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_j7xst")
+
+[node name="9" type="Sprite2D" parent="Sprite1/Rocks" unique_id=616947013]
+top_level = true
+z_index = 1
+position = Vector2(27, 11)
+texture = ExtResource("4_5q4rg")
+
+[node name="10" type="Sprite2D" parent="Sprite1/Rocks" unique_id=1004376581]
+top_level = true
+z_index = 1
+position = Vector2(37.000004, 9.000002)
+rotation = 2.8797934
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_qht1q")
+
+[node name="11" type="Sprite2D" parent="Sprite1/Rocks" unique_id=507494713]
+z_index = 1
+position = Vector2(42.666664, 5.3333335)
+texture = ExtResource("3_l4wsb")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=691711558]
+z_index = 2
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_sek14")
+
+[node name="GrowTimer" type="Timer" parent="." unique_id=1008458558]
+wait_time = 14.0
+one_shot = true
+
+[node name="Health" type="Node" parent="." unique_id=2128954781]
+script = ExtResource("12_jn6al")

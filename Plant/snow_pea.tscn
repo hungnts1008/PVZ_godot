@@ -24,6 +24,7 @@ size = Vector2(94, 111)
 
 [node name="SnowPea" type="StaticBody2D" unique_id=2110900091]
 scale = Vector2(0.75, 0.75)
+collision_mask = 2
 script = ExtResource("1_d2auo")
 health_path = NodePath("Health")
 
