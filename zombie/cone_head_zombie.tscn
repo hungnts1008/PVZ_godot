@@ -150,6 +150,9 @@ size = Vector2(87, 140)
 [node name="ConeHeadZombie" type="CharacterBody2D" unique_id=2147261502 groups=["enemies"]]
 collision_layer = 2
 script = ExtResource("1_cy5nr")
+move_speed = 4.7
+max_hp = 370
+attack_damage = 100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=310787783]
 sprite_frames = SubResource("SpriteFrames_a0qwm")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="1_mdm51"]
 [ext_resource type="Texture2D" uid="uid://bl0xhxpu1glys" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_0.png" id="1_uxr7h"]
+[ext_resource type="Script" uid="uid://s4r5g3gpurgh" path="res://zombie/zombie.gd" id="1_yk1or"]
 [ext_resource type="Texture2D" uid="uid://bpoqd2oww3qrh" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_1.png" id="2_yk1or"]
 [ext_resource type="Texture2D" uid="uid://d0mkumcwpedr2" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_2.png" id="3_j3bb5"]
 [ext_resource type="Texture2D" uid="uid://cmvgn2ta3ne40" path="res://art/assets/zombie/bucket_head_zombie/attack/BucketheadZombieAttack_3.png" id="4_uhrem"]
@@ -124,6 +125,10 @@ size = Vector2(85, 133)
 
 [node name="Bucket_head_zombie" type="CharacterBody2D" unique_id=1458318708 groups=["enemies"]]
 collision_layer = 2
+script = ExtResource("1_yk1or")
+move_speed = 4.7
+max_hp = 1100
+attack_damage = 100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=449933546]
 sprite_frames = SubResource("SpriteFrames_g3okk")

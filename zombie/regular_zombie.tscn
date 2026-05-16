@@ -239,7 +239,9 @@ size = Vector2(66, 98)
 [node name="RegularZombie" type="CharacterBody2D" unique_id=301284323 groups=["enemies"]]
 collision_layer = 2
 script = ExtResource("1_t6dk4")
-move_speed = 20.0
+move_speed = 4.7
+max_hp = 190
+attack_damage = 100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=119724033]
 scale = Vector2(0.75, 0.75)
