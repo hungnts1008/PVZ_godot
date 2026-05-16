@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://k0vip8rt1q8p" path="res://art/assets/Sunflower/leaves2.tres" id="1_flm11"]
 [ext_resource type="Texture2D" uid="uid://cv5ducrvhq4k5" path="res://art/assets/Sunflower/body2.tres" id="1_tlrh7"]
-[ext_resource type="Script" uid="uid://dbn5a138hapln" path="res://scripts/plants/sunflower.gd" id="1_tuxos"]
+[ext_resource type="Script" path="res://scripts/plants/sunflower.gd" id="1_tuxos"]
 [ext_resource type="Texture2D" uid="uid://d2327lqf2bd08" path="res://art/assets/Sunflower/head.tres" id="1_xfvvh"]
 [ext_resource type="Texture2D" uid="uid://bd16gh5uv87g" path="res://art/assets/Sunflower/petal1.tres" id="2_0v11v"]
 [ext_resource type="Texture2D" uid="uid://dwn2l7n1npdi2" path="res://art/assets/Sunflower/body1.tres" id="2_0yxkg"]
@@ -34,6 +34,7 @@
 size = Vector2(70, 81)
 
 [node name="Sunflower" type="StaticBody2D" unique_id=875610985]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_tuxos")
 
 [node name="Sprite" type="Node2D" parent="." unique_id=1853535742]

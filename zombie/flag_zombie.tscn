@@ -172,13 +172,14 @@ size = Vector2(97, 114)
 [node name="FlagZombie" type="CharacterBody2D" unique_id=25038383 groups=["enemies"]]
 collision_layer = 2
 script = ExtResource("1_l8jvv")
-move_speed = 3.7
+move_speed = 15.0
 max_hp = 190
 attack_damage = 100
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1283166626]
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_smjx5")
-animation = &"lost_head"
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=656500855]
 position = Vector2(32.5, 13)

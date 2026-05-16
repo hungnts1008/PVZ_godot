@@ -148,9 +148,10 @@ animations = [{
 size = Vector2(87, 140)
 
 [node name="ConeHeadZombie" type="CharacterBody2D" unique_id=2147261502 groups=["enemies"]]
+scale = Vector2(0.75, 0.75)
 collision_layer = 2
 script = ExtResource("1_cy5nr")
-move_speed = 4.7
+move_speed = 15.0
 max_hp = 370
 attack_damage = 100
 

@@ -23,7 +23,7 @@ enum State { WALK, ATTACK, DEAD }
 @onready var attack_timer: Timer = get_node_or_null(attack_timer_path) as Timer
 
 var _state: State = State.WALK
-var _attack_target: Node = null
+var _attack_target: Object	 = null
 
 
 func _ready() -> void:
@@ -57,11 +57,12 @@ func _physics_process(_delta: float) -> void:
 		velocity = Vector2.ZERO
 		_set_state(State.ATTACK)
 	else:
-		_attack_target = _find_attack_target()
+		_set_attack_target(_find_attack_target())
 		if _is_target_valid(_attack_target):
 			velocity = Vector2.ZERO
 			_set_state(State.ATTACK)
 		else:
+			_set_attack_target(null)
 			velocity = Vector2.LEFT * move_speed
 			_set_state(State.WALK)
 
@@ -82,13 +83,13 @@ func take_damage(amount: int) -> void:
 		health.damage(amount)
 
 
-func _find_attack_target() -> Node:
+func _find_attack_target() -> Object:
 	for index in range(get_slide_collision_count()):
-		var collision := get_slide_collision(index)
+		var collision: KinematicCollision2D = get_slide_collision(index)
 		if collision == null:
 			continue
 
-		var body := collision.get_collider()
+		var body: Object = collision.get_collider()
 		if body != null and body.has_method("take_damage"):
 			return body
 
@@ -97,9 +98,25 @@ func _find_attack_target() -> Node:
 
 func _on_attack_timer_timeout() -> void:
 	if _state == State.DEAD or not _is_target_valid(_attack_target):
+		_set_attack_target(null)
 		return
 
 	_attack_target.call("take_damage", attack_damage)
+
+
+func _set_attack_target(target: Object) -> void:
+	_attack_target = target
+
+	var target_node: Node = target as Node
+	if target_node == null:
+		return
+
+	if not target_node.tree_exited.is_connected(_on_attack_target_tree_exited):
+		target_node.tree_exited.connect(_on_attack_target_tree_exited, CONNECT_ONE_SHOT)
+
+
+func _on_attack_target_tree_exited() -> void:
+	_attack_target = null
 
 
 func _on_health_died() -> void:
@@ -149,5 +166,5 @@ func _get_desired_animation() -> StringName:
 	return walk_animation
 
 
-func _is_target_valid(target: Node) -> bool:
+func _is_target_valid(target: Object) -> bool:
 	return target != null and is_instance_valid(target) and target.has_method("take_damage")

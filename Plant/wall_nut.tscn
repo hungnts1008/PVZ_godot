@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpnrfqmkka83f"]
 
-[ext_resource type="Script" uid="uid://crtvhnk1c6sg7" path="res://scripts/components/damage_stages.gd" id="1_brfk1"]
+[ext_resource type="Script" path="res://scripts/components/damage_stages.gd" id="1_brfk1"]
 [ext_resource type="Script" uid="uid://52j7oju8tdk3" path="res://scripts/plants/plant_base.gd" id="1_xt1om"]
 [ext_resource type="Texture2D" uid="uid://cnqmqaw7ljboi" path="res://art/assets/Wall-nut/body1.tres" id="2_cp6jy"]
 [ext_resource type="Texture2D" uid="uid://ws7nswoya56e" path="res://art/assets/Wall-nut/body2.tres" id="3_jjhdg"]
@@ -11,6 +11,7 @@
 size = Vector2(83.5, 98)
 
 [node name="WallNut" type="StaticBody2D" unique_id=1538585257]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_xt1om")
 health_path = NodePath("Health")
 
