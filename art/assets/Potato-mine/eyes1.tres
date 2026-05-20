@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://cr7u2a67qjnav"]
+
+[ext_resource type="Texture2D" uid="uid://vbf01h5fwehi" path="res://art/assets/potato mine.png" id="1_0ry4w"]
+
+[resource]
+atlas = ExtResource("1_0ry4w")
+region = Rect2(1, 88, 44, 24)

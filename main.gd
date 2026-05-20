@@ -17,7 +17,7 @@ var plant_scenes := {
 	"snow_pea": preload("res://Plant/snow_pea.tscn"),
 	"repeater": preload("res://Plant/repeater.tscn"),
 	"chomper": preload("res://Plant/chomper.tscn"),
-	"potato_mine": preload("res://Plant/potato_mine_1.tscn")
+		"potato_mine": preload("res://Plant/potato_mine.tscn")
 }
 
 
