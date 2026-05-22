@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4iqgojh86002"]
 
 [ext_resource type="Texture2D" uid="uid://bf73ouwmns26d" path="res://art/assets/Cherry-bomb/stem1.tres" id="1_foveo"]
+[ext_resource type="Script" uid="uid://cj557uxr3tanu" path="res://scripts/plants/cherry_bomb.gd" id="1_i46vm"]
 [ext_resource type="Texture2D" uid="uid://b0oaon6jogc47" path="res://art/assets/Cherry-bomb/stem2.tres" id="2_urg1v"]
 [ext_resource type="Texture2D" uid="uid://d4d0w8qlokfbq" path="res://art/assets/Cherry-bomb/head_left.tres" id="3_i46vm"]
 [ext_resource type="Texture2D" uid="uid://lnmvr8d8lytf" path="res://art/assets/Cherry-bomb/lefteye_left.tres" id="4_8aw1v"]
@@ -23,8 +24,11 @@ size = Vector2(97.333336, 68)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_foveo"]
 size = Vector2(274.6667, 309.33337)
 
-[node name="CherryBomb" type="Area2D" unique_id=1969799228]
+[node name="CherryBomb" type="StaticBody2D" unique_id=1408452246]
 scale = Vector2(0.75, 0.75)
+collision_mask = 2
+script = ExtResource("1_i46vm")
+health_path = NodePath("Health")
 
 [node name="Sprite" type="Node2D" parent="." unique_id=1648874194]
 
@@ -100,9 +104,12 @@ position = Vector2(7.333332, -28.66667)
 shape = SubResource("RectangleShape2D_e8jbb")
 
 [node name="ExplodeTimer" type="Timer" parent="." unique_id=449620296]
+one_shot = true
 autostart = true
 
 [node name="ExplosionArea" type="Area2D" parent="." unique_id=1123423105]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" unique_id=1078019752]
 shape = SubResource("RectangleShape2D_foveo")
