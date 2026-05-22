@@ -1,4 +1,4 @@
-extends PlantBase
+extends ExplosionPlant
 class_name PotatoMine
 
 @export var sprite1_path: NodePath = NodePath("Sprite1")
@@ -8,9 +8,6 @@ class_name PotatoMine
 
 @export var near_area_path: NodePath = NodePath("NearArea")
 @export var trigger_area_path: NodePath = NodePath("TriggerArea")
-@export var explosion_area_path: NodePath = NodePath("ExplosionArea")
-
-@export var explosion_damage: int = 1800
 
 @export var blink_anim_slow: StringName = &"blink_slow"
 @export var blink_anim_fast: StringName = &"blink_fast"
@@ -22,15 +19,12 @@ var _bulb: AnimatedSprite2D
 
 var _near_area: Area2D
 var _trigger_area: Area2D
-var _explosion_area: Area2D
 
 var _armed: bool = false
-var _exploded: bool = false
 var _near_zombies: Dictionary = {}
 
 
 func _ready() -> void:
-	super._ready()
 
 	_sprite1 = get_node_or_null(sprite1_path) as Node2D
 	_sprite2 = get_node_or_null(sprite2_path) as Node2D
@@ -39,7 +33,6 @@ func _ready() -> void:
 
 	_near_area = get_node_or_null(near_area_path) as Area2D
 	_trigger_area = get_node_or_null(trigger_area_path) as Area2D
-	_explosion_area = get_node_or_null(explosion_area_path) as Area2D
 
 	if _sprite1 != null:
 		_sprite1.visible = true
@@ -47,7 +40,7 @@ func _ready() -> void:
 		_sprite2.visible = false
 
 	_armed = false
-	_exploded = false
+	start_explode_timer = false
 
 	if _grow_timer != null:
 		if not _grow_timer.timeout.is_connected(_on_grow_timer_timeout):
@@ -57,8 +50,11 @@ func _ready() -> void:
 	else:
 		push_warning("PotatoMine: missing GrowTimer")
 
-	_bind_area_signals()
+	super._ready()
 	_update_bulb_blink_animation()
+
+	if not explode_timer.is_stopped():
+		explode_timer.stop()
 
 
 func _bind_area_signals() -> void:
@@ -75,13 +71,13 @@ func _bind_area_signals() -> void:
 			_trigger_area.body_entered.connect(_on_trigger_body_entered)
 	else:
 		push_warning("PotatoMine: missing TriggerArea")
-
-	if _explosion_area != null:
-		_explosion_area.monitoring = true
-	else:
-		push_warning("PotatoMine: missing ExplosionArea")
+	super._bind_area_signals()
 
 
+func _on_explode_timer_timeout() -> void:
+	explode("mine_kill")
+	
+	
 func _on_grow_timer_timeout() -> void:
 	_arm()
 
@@ -103,14 +99,14 @@ func _arm() -> void:
 
 
 func _explode_if_zombie_already_in_trigger() -> void:
-	if _exploded or not _armed:
+	if exploded or not _armed:
 		return
 	if _trigger_area == null:
 		return
 	# Requires monitoring=true; we set it in _bind_area_signals().
 	for body in _trigger_area.get_overlapping_bodies():
 		if _is_zombie(body):
-			_explode()	
+			explode_timer.start()
 			return
 
 
@@ -130,11 +126,11 @@ func _on_near_body_exited(body: Node) -> void:
 
 
 func _on_trigger_body_entered(body: Node) -> void:
-	if not _armed or _exploded:
+	if not _armed or exploded:
 		return
 	if not _is_zombie(body):
 		return
-	_explode()
+	explode()
 
 
 func _update_bulb_blink_animation(force_restart: bool = false) -> void:
@@ -165,67 +161,3 @@ func _cleanup_near_cache() -> void:
 			to_remove.append(id)
 	for id in to_remove:
 		_near_zombies.erase(id)
-
-
-func _explode() -> void:
-	if _exploded:
-		return
-	_exploded = true
-
-	# Apply damage/kill to all bodies in the blast area.
-	var bodies: Array[Node2D] = []
-	if _explosion_area != null:
-		bodies = _explosion_area.get_overlapping_bodies()
-	elif _trigger_area != null:
-		bodies = _trigger_area.get_overlapping_bodies()
-
-	for body in bodies:
-		_apply_mine_effect(body)
-
-	queue_free()
-
-
-func _apply_mine_effect(body: Node) -> void:
-	if body == null or not is_instance_valid(body):
-		return
-	if not _is_zombie(body):
-		return
-
-	var target_health := _resolve_health_from(body)
-	if target_health != null:
-		# Per requirement: if target has no mine_kill(), force death via Health's died signal.
-		if target_health.hp > explosion_damage:
-			if body.has_method("take_damage"):
-				body.call("take_damage", explosion_damage)
-			else:
-				body.queue_free()
-		else:
-			if body.has_method("mine_kill"):
-				body.call("mine_kill")
-				return
-			else:
-				target_health.hp = 0
-				target_health.died.emit()
-				return
-	else:
-		body.queue_free()
-			
-	# Preferred hook: allow targets to override death handling.
-
-
-func _resolve_health_from(node: Node) -> Health:
-	# Common convention in this repo: a child named "Health" with scripts/components/health.gd
-	var direct := node.get_node_or_null("Health")
-	if direct is Health:
-		return direct as Health
-
-	# Generic search for any Health child.
-	for child in node.get_children():
-		if child is Health:
-			return child as Health
-
-	return null
-
-
-func _is_zombie(node: Node) -> bool:
-	return node != null and (node.is_in_group("zombies") or node.is_in_group("enemies"))
