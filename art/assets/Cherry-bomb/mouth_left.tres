@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://8etb14dp1dqc"]
+
+[ext_resource type="Texture2D" uid="uid://scy66fy32ahp" path="res://art/assets/cherry bomb.png" id="1_tuhok"]
+
+[resource]
+atlas = ExtResource("1_tuhok")
+region = Rect2(1, 161, 24, 12)

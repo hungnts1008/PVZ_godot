@@ -255,3 +255,7 @@ one_shot = true
 script = ExtResource("12_jn6al")
 max_hp = 300
 hp = 300
+
+[node name="ExplodeTimer" type="Timer" parent="." unique_id=2067715109]
+wait_time = 0.05
+one_shot = true

@@ -1,11 +1,121 @@
 [gd_scene format=3 uid="uid://b4iqgojh86002"]
 
-[node name="CherryBomb" type="Area2D" unique_id=1969799228]
+[ext_resource type="Texture2D" uid="uid://bf73ouwmns26d" path="res://art/assets/Cherry-bomb/stem1.tres" id="1_foveo"]
+[ext_resource type="Script" uid="uid://cj557uxr3tanu" path="res://scripts/plants/cherry_bomb.gd" id="1_i46vm"]
+[ext_resource type="Texture2D" uid="uid://b0oaon6jogc47" path="res://art/assets/Cherry-bomb/stem2.tres" id="2_urg1v"]
+[ext_resource type="Texture2D" uid="uid://d4d0w8qlokfbq" path="res://art/assets/Cherry-bomb/head_left.tres" id="3_i46vm"]
+[ext_resource type="Texture2D" uid="uid://lnmvr8d8lytf" path="res://art/assets/Cherry-bomb/lefteye_left.tres" id="4_8aw1v"]
+[ext_resource type="Texture2D" uid="uid://cyop13va78yqp" path="res://art/assets/Cherry-bomb/righteye_left.tres" id="5_hm38v"]
+[ext_resource type="Texture2D" uid="uid://8etb14dp1dqc" path="res://art/assets/Cherry-bomb/mouth_left.tres" id="6_uyvew"]
+[ext_resource type="Texture2D" uid="uid://vvpd465emm16" path="res://art/assets/Cherry-bomb/head_right.tres" id="7_pyfgo"]
+[ext_resource type="Texture2D" uid="uid://ciimrex25mn22" path="res://art/assets/Cherry-bomb/lefteye_right.tres" id="8_xmjtr"]
+[ext_resource type="Texture2D" uid="uid://cagb8j0lhcul8" path="res://art/assets/Cherry-bomb/righteye_right.tres" id="9_qr3ox"]
+[ext_resource type="Texture2D" uid="uid://u3swm3nfimpk" path="res://art/assets/Cherry-bomb/mouth_right.tres" id="10_e1bdj"]
+[ext_resource type="Texture2D" uid="uid://blfq1ydcltp7o" path="res://art/assets/Cherry-bomb/leaves1.tres" id="11_f8hd3"]
+[ext_resource type="Texture2D" uid="uid://bakvegdyudjph" path="res://art/assets/Cherry-bomb/leaves2.tres" id="12_eookq"]
+[ext_resource type="Texture2D" uid="uid://cy0ny8ktfw65n" path="res://art/assets/Cherry-bomb/leaves3.tres" id="13_5kn4w"]
+[ext_resource type="Texture2D" uid="uid://cvixbgodr7ry4" path="res://art/assets/Cherry-bomb/leaves4.tres" id="14_6drtp"]
+[ext_resource type="Texture2D" uid="uid://da8k3wsokwyh8" path="res://art/assets/Cherry-bomb/leaves5.tres" id="15_ta32b"]
+[ext_resource type="Script" uid="uid://becfw0mmeuptq" path="res://scripts/components/health.gd" id="16_urg1v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8jbb"]
+size = Vector2(97.333336, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foveo"]
+size = Vector2(274.6667, 309.33337)
+
+[node name="CherryBomb" type="StaticBody2D" unique_id=1408452246]
 scale = Vector2(0.75, 0.75)
+collision_mask = 2
+script = ExtResource("1_i46vm")
+health_path = NodePath("Health")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1648874194]
+
+[node name="Stem1" type="Sprite2D" parent="Sprite" unique_id=998156856]
+position = Vector2(-10.666667, -41.333332)
+texture = ExtResource("1_foveo")
+
+[node name="Stem2" type="Sprite2D" parent="Sprite" unique_id=2016953046]
+position = Vector2(9.333334, -32)
+texture = ExtResource("2_urg1v")
+
+[node name="LeftCherry" type="Sprite2D" parent="Sprite" unique_id=1998357872]
+
+[node name="Head" type="Sprite2D" parent="Sprite/LeftCherry" unique_id=546670858]
+position = Vector2(-16, -16)
+texture = ExtResource("3_i46vm")
+
+[node name="LeftEye" type="Sprite2D" parent="Sprite/LeftCherry" unique_id=1760200494]
+position = Vector2(-29.333332, -18.666666)
+texture = ExtResource("4_8aw1v")
+
+[node name="RightEye" type="Sprite2D" parent="Sprite/LeftCherry" unique_id=1292344665]
+position = Vector2(-9.333333, -17.333334)
+texture = ExtResource("5_hm38v")
+
+[node name="Mouth" type="Sprite2D" parent="Sprite/LeftCherry" unique_id=319392959]
+position = Vector2(-22.666668, -4)
+texture = ExtResource("6_uyvew")
+
+[node name="RightCherry" type="Sprite2D" parent="Sprite" unique_id=1249663175]
+
+[node name="Head" type="Sprite2D" parent="Sprite/RightCherry" unique_id=1090368826]
+position = Vector2(32, -17.333334)
+texture = ExtResource("7_pyfgo")
+
+[node name="LeftEye" type="Sprite2D" parent="Sprite/RightCherry" unique_id=961061134]
+position = Vector2(23.999998, -14.666667)
+texture = ExtResource("8_xmjtr")
+
+[node name="RightEye" type="Sprite2D" parent="Sprite/RightCherry" unique_id=1328972574]
+position = Vector2(42.666668, -20)
+texture = ExtResource("9_qr3ox")
+
+[node name="Mouth" type="Sprite2D" parent="Sprite/RightCherry" unique_id=1527530669]
+position = Vector2(36, -8)
+texture = ExtResource("10_e1bdj")
+
+[node name="Leaves" type="Sprite2D" parent="Sprite" unique_id=141173297]
 metadata/_edit_group_ = true
 
-[node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1544522452]
+[node name="1" type="Sprite2D" parent="Sprite/Leaves" unique_id=650486266]
+position = Vector2(-29.333334, -53.333336)
+texture = ExtResource("11_f8hd3")
+
+[node name="2" type="Sprite2D" parent="Sprite/Leaves" unique_id=218968425]
+position = Vector2(-14.666666, -53.333332)
+texture = ExtResource("12_eookq")
+
+[node name="3" type="Sprite2D" parent="Sprite/Leaves" unique_id=862423674]
+position = Vector2(-19.333334, -69.66667)
+texture = ExtResource("13_5kn4w")
+
+[node name="4" type="Sprite2D" parent="Sprite/Leaves" unique_id=1327771035]
+position = Vector2(-11.333333, -67)
+texture = ExtResource("14_6drtp")
+
+[node name="5" type="Sprite2D" parent="Sprite/Leaves" unique_id=771783996]
+position = Vector2(2.6666667, -58.666668)
+texture = ExtResource("15_ta32b")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1669146397]
+position = Vector2(7.333332, -28.66667)
+shape = SubResource("RectangleShape2D_e8jbb")
 
 [node name="ExplodeTimer" type="Timer" parent="." unique_id=449620296]
+one_shot = true
+autostart = true
+
+[node name="ExplosionArea" type="Area2D" parent="." unique_id=1123423105]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" unique_id=1078019752]
+shape = SubResource("RectangleShape2D_foveo")
+debug_color = Color(0.77508396, 0.4415742, 5.7756904e-07, 0.41960785)
+
+[node name="Health" type="Node" parent="." unique_id=703961399]
+script = ExtResource("16_urg1v")
+max_hp = 1000
+hp = 1000
